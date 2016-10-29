@@ -7,7 +7,7 @@
 ;; Last-Updated: 三 8月 10 19:53:35 2016 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
 ;;     Update #: 1
-;; URL: http://wuhongyi.github.io -->
+;; URL: http://wuhongyi.cn -->
 
 # algorithm
 
