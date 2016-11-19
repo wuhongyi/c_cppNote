@@ -1,0 +1,502 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>map · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="random.html" />
+    
+    
+    <link rel="prev" href="cath.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Base/">
+            
+                <a href="../Base/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    头文件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="algorithm.html">
+            
+                <a href="algorithm.html">
+            
+                    
+                    algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="cath.md">
+            
+                <span>
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="random.html">
+            
+                <a href="random.html">
+            
+                    
+                    random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="vector.html">
+            
+                <a href="vector.html">
+            
+                    
+                    vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Experience/">
+            
+                <a href="../Experience/">
+            
+                    
+                    规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >map</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- map.md --- 
+;; 
+;; Description: 
+;; Author: Hongyi Wu(吴鸿毅)
+;; Email: wuhongyi@qq.com 
+;; Created: 三 8月 10 19:49:29 2016 (+0800)
+;; Last-Updated: 三 8月 10 19:51:56 2016 (+0800)
+;;           By: Hongyi Wu(吴鸿毅)
+;;     Update #: 2
+;; URL: http://wuhongyi.cn -->
+
+
+<h1 id="map">map</h1><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;map&gt;</span></span>
+
+<span class="hljs-built_in">map</span>::begin
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#xFF08;iterator&#xFF09;&#x7684;&#x5730;&#x5740;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;&#x5F53;&#x8FD4;&#x56DE;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5730;&#x5740;&#x4E3A;&#x4E00;&#x4E2A;&#x5E38;&#x503C;&#x5B9A;&#x4F4D;&#x5668;&#xFF08;_iterator),&#x5219;<span class="hljs-built_in">map</span>&#x4E0D;&#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5730;&#x5740;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B9A;&#x4F4D;&#x5668;&#xFF08;iterator&#xFF09;&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x53EF;&#x88AB;&#x4FEE;&#x6539;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53CC;&#x5411;&#x5B9A;&#x4F4D;&#x5668;&#x5730;&#x5740;&#x3002;
+
+<span class="hljs-built_in">map</span>&#xFF1A;&#xFF1A;clear
+&#x529F;&#x80FD;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5168;&#x90E8;&#x5143;&#x7D20;&#x5220;&#x9664;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;clear&#x4F1A;&#x5220;&#x9664;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5168;&#x90E8;&#x5143;&#x7D20;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;&#x3002;
+
+<span class="hljs-built_in">map</span>&#xFF1A;&#xFF1A;count
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Key&#x662F;&#x8981;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x8303;&#x56F4;&#x662F;[low_bound(_Key),upper_bound(_Key)]&#x3002;&#x56E0;&#x4E3A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5173;&#x952E;&#x5B57;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x6545;&#x5B83;&#x53EA;&#x80FD;&#x53D6;<span class="hljs-number">0</span>&#x6216;&#x8005;<span class="hljs-number">1</span>&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x5305;&#x542B;&#x4E86;&#x5173;&#x952E;&#x5B57;&#x4E3A;_Key&#x7684;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<span class="hljs-number">1</span>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;<span class="hljs-number">0</span>&#x3002;
+
+<span class="hljs-built_in">map</span>::enpty
+&#x529F;&#x80FD;&#xFF1A;&#x6D4B;&#x8BD5;&#x4E00;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;empty&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x4E00;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;&#x5BB9;&#x5668;<span class="hljs-built_in">map</span>&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;ture&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;<span class="hljs-literal">false</span>&#x3002;
+
+<span class="hljs-built_in">map</span>::end
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x540E;&#x9762;&#x7684;&#x5B9A;&#x4F4D;&#xFF08;iterator&#xFF09;&#x7684;&#x5730;&#x5740;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;end&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x4E00;&#x4E2A;&#x5B9A;&#x4F4D;&#x5668;&#x662F;&#x5426;&#x5DF2;&#x5230;&#x8FBE;&#x5B83;&#x7684;&#x5C3E;&#x90E8;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x540E;&#x9762;&#x7684;&#x53CC;&#x5411;&#x5B9A;&#x4F4D;&#x5668;&#x5730;&#x5740;&#x3002;&#x5F53;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x7ED3;&#x679C;&#x6CA1;&#x5B9A;&#x4E49;&#x3002;
+
+<span class="hljs-built_in">map</span>::equal_range
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x5BF9;&#x5B9A;&#x4F4D;&#x5668;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5143;&#x7D20;&#x548C;&#x7B2C;&#x4E00;&#x4E2A;&#x6BD4;&#x7ED9;&#x5B9A;&#x7684;&#x5173;&#x952E;&#x5B57;&#x5927;&#x7684;&#x5143;&#x7D20;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Key&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6392;&#x5E8F;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x51FD;&#x6570;&#x4E00;&#x5BF9;&#x5B9A;&#x4F4D;&#x5668;&#x3002;&#x8981;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9A;&#x4F4D;&#x5668;&#x4E2D;&#x53D6;&#x5F97;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x7528;pr.first&#x3002;&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B9A;&#x4F4D;&#x5668;&#x4E2D;&#x53D6;&#x5F97;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x7528;pr.second&#x3002;
+
+<span class="hljs-built_in">map</span>::erase
+&#x529F;&#x80FD;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x4E00;&#x5B9A;&#x8303;&#x56F4;&#x7684;&#x5143;&#x7D20;&#x5220;&#x9664;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Where&#x8868;&#x793A;&#x8981;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;_First&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;_Last&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;_Key&#x4ECE;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x3002;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x91CD;&#x65B0;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#xFF0C;&#x6545;&#x53EA;&#x6709;&#x5BF9;&#x5E94;&#x4E8E;&#x88AB;&#x5220;&#x9664;&#x5143;&#x7D20;&#x7684;iterator&#x548C;reference&#x5931;&#x6548;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5B83;&#x4E0D;&#x4F1A;&#x629B;&#x51FA;&#x4EFB;&#x4F55;&#x7684;exception&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x524D;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x6CA1;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7684;&#x53CC;&#x5411;&#x5B9A;&#x4F4D;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x8FD9;&#x6837;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x672B;&#x5C3E;&#x3002;&#x7B2C;&#x4E09;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x3002;
+
+<span class="hljs-built_in">map</span>::find
+&#x529F;&#x80FD;&#xFF1A;&#x6C42;&#x51FA;&#x4E0E;&#x7ED9;&#x5B9A;&#x7684;&#x5173;&#x952E;&#x5B57;&#x76F8;&#x7B49;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Key&#x662F;&#x8981;&#x8FDB;&#x884C;&#x641C;&#x7D22;&#x7684;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5173;&#x952E;&#x5B57;&#x4E3A;_Key&#x7684;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5730;&#x5740;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;&#x5E38;&#x503C;&#x5B9A;&#x4F4D;&#x5668;&#xFF08;_iterator&#xFF09;&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x53EF;&#x901A;&#x8FC7;&#x5B83;&#x4E0D;&#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5730;&#x5740;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B9A;&#x4F4D;&#x5668;&#xFF08;iterator&#xFF09;&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x53EF;&#x901A;&#x8FC7;&#x5B83;&#x88AB;&#x4FEE;&#x6539;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x627E;&#x5230;&#x8BE5;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x5173;&#x952E;&#x5B57;&#x4E3A;_Key&#x7684;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x7ED3;&#x675F;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+
+<span class="hljs-built_in">map</span>::get_allocator
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x8BE5;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;allocator&#x7684;&#x4E00;&#x4E2A;&#x526F;&#x672C;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;&#x5BB9;&#x5668;<span class="hljs-built_in">map</span>&#x7684;allocator&#x6307;&#x660E;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5B58;&#x50A8;&#x7BA1;&#x7406;&#x3002;&#x9ED8;&#x8BA4;&#x7684;allocator&#x80FD;&#x63D0;&#x4F9B;STL&#x5BB9;&#x5668;&#x9AD8;&#x6821;&#x7684;&#x8FD0;&#x884C;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8BE5;&#x5BB9;&#x5668;&#x7684;allocator&#x3002;
+
+<span class="hljs-built_in">map</span>::insert
+&#x529F;&#x80FD;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6216;&#x8005;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x5230;<span class="hljs-built_in">map</span>&#x7684;&#x7279;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E2D;&#x53BB;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Where&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x63D2;&#x5165;&#x5230;<span class="hljs-built_in">map</span>&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;_Val&#x63D2;&#x5165;&#x7684;&#x53C2;&#x6570;&#x7684;&#x503C;&#xFF0C;_First&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;_Last&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x88AB;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x80FD;&#x5728;_Where&#x540E;&#x9762;&#x8FC5;&#x901F;&#x5730;&#x63D2;&#x5165;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x8981;&#x5F88;&#x77ED;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x7B2C;&#x4E09;&#x4E2A;&#x6210;&#x5458;&#x51FD;&#x6570;&#x5C06;&#x8303;&#x56F4;&#x4E3A;[_First,_Last]&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x7B2C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x5BF9;&#x503C;&#xFF0C;&#x5F53;&#x63D2;&#x5165;&#x6210;&#x529F;&#x65F6;&#xFF0C;<span class="hljs-keyword">bool</span>=<span class="hljs-literal">true</span>&#xFF0C;&#x5F53;&#x8981;&#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5173;&#x952E;&#x5B57;&#x4E0E;&#x5DF2;&#x6709;&#x7684;&#x53C2;&#x6570;&#x7684;&#x503C;&#x76F8;&#x540C;&#xFF0C;&#x5219;<span class="hljs-keyword">bool</span>=<span class="hljs-literal">false</span>&#xFF0C;&#x800C;iterator&#x6307;&#x5411;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x6216;&#x8005;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x6307;&#x5411;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+
+<span class="hljs-built_in">map</span>::key_comp
+&#x529F;&#x80FD;&#xFF1A;&#x53D6;&#x5F97;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5BF9;&#x8C61;&#x7684;&#x526F;&#x672C;&#x4EE5;&#x5BF9;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF1A;<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Key&amp;_Left,<span class="hljs-keyword">const</span> Key&amp;_Right)</span></span>;&#x3002;&#x5F53;_Left&#x4E0E;_Right&#x5728;&#x6B21;&#x5E8F;&#x6BD4;&#x8F83;&#x4E2D;&#x4E0D;&#x540C;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<span class="hljs-literal">true</span>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;<span class="hljs-literal">false</span>&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x53D6;&#x5F97;&#x4E00;&#x4E2A;&#x5BF9;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x7684;&#x6BD4;&#x8F83;&#x5BF9;&#x8C61;&#x3002;
+
+<span class="hljs-built_in">map</span>::lower_bound
+&#x529F;&#x80FD;&#xFF1A;&#x6C42;&#x51FA;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x662F;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Key&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6392;&#x5E8F;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;const_iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E0D;&#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x53EF;&#x88AB;&#x4FEE;&#x6539;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x662F;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#xFF0C;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x6307;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x7ED3;&#x675F;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-built_in">map</span>
+&#x529F;&#x80FD;&#xFF1A;<span class="hljs-built_in">map</span>&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Al&#x4E00;&#x4E2A;&#x5206;&#x914D;&#x5668;&#x7C7B;&#x3002;_Comp&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x7684;&#x51FD;&#x6570;,&#x5B83;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;hash_compare&#x3002;_Right&#x4E00;&#x4E2A;<span class="hljs-built_in">map</span>&#x7684;&#x62F7;&#x8D1D;&#x3002;_First&#x88AB;&#x62F7;&#x8D1D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x3002;_Last&#x88AB;&#x62F7;&#x8D1D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6240;&#x6709;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x90FD;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x5206;&#x914D;&#x5668;&#x548C;&#x521D;&#x59CB;&#x5316;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x6240;&#x6709;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x90FD;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;Traits&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x5BF9;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x5934;&#x4E09;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x521D;&#x59CB;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x7B2C;&#x56DB;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;_Right&#x5BB9;&#x5668;&#x7684;&#x526F;&#x672C;&#x3002;&#x540E;&#x4E09;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x62F7;&#x8D1D;&#x5728;&#x8303;&#x56F4;_First~_Last&#x5185;&#x7684;&#x4E00;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;&#x3002;
+
+<span class="hljs-built_in">map</span>::max_size
+&#x529F;&#x80FD;&#xFF1A;&#x8BA1;&#x7B97;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;max_size&#x4F1A;&#x8FD4;&#x56DE;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x53EF;&#x80FD;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-keyword">operator</span>[]
+&#x529F;&#x80FD;&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x63D2;&#x5165;&#x5230;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x53BB;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Key&#x662F;&#x88AB;&#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5F53;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x627E;&#x4E0D;&#x5230;_Key&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x5219;&#x63D2;&#x5165;&#x5230;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x4E14;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;_Key&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5730;&#x5740;&#xFF08;reference&#xFF09;&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-keyword">operator</span>!=
+&#x529F;&#x80FD;&#xFF1A;&#x6D4B;&#x8BD5;&#x8BE5;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5DE6;&#x8FB9;&#x4E0E;&#x53F3;&#x8FB9;&#x662F;&#x5426;&#x76F8;&#x540C;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Left&#x548C;_Right&#x662F;&#x5F85;&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x76F8;&#x7B49;&#xFF0C;&#x5F53;&#x4E14;&#x4EC5;&#x5F53;&#x5B83;&#x4EEC;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x76F8;&#x7B49;&#x4E14;&#x540C;&#x4E00;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x503C;&#x76F8;&#x7B49;&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-keyword">operator</span>&lt;
+&#x529F;&#x80FD;&#xFF1A;&#x6D4B;&#x8BD5;&#x8BE5;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5DE6;&#x8FB9;&#x662F;&#x5426;&#x5C0F;&#x4E8E;&#x53F3;&#x8FB9;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Left&#x548C;_Right&#x662F;&#x5F85;&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x662F;&#x57FA;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;_Left&lt;_Right&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;True&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;False&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-keyword">operator</span>&lt;=
+&#x529F;&#x80FD;&#xFF1A;&#x6D4B;&#x8BD5;&#x5DE6;&#x8FB9;&#x7684;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x662F;&#x5426;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x53F3;&#x8FB9;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Left&#x548C;_Right&#x662F;&#x5F85;&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x662F;&#x57FA;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;_Left&lt;=_Right&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;True&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;False&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-keyword">operator</span>==
+&#x529F;&#x80FD;&#xFF1A;&#x6D4B;&#x8BD5;&#x5DE6;&#x8FB9;&#x7684;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E0E;&#x53F3;&#x8FB9;&#x662F;&#x5426;&#x76F8;&#x540C;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Left&#x548C;_Right&#x662F;&#x5F85;&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x76F8;&#x7B49;&#xFF0C;&#x5F53;&#x4E14;&#x4EC5;&#x5F53;&#x5B83;&#x4EEC;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x76F8;&#x7B49;&#x4E14;&#x540C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x503C;&#x76F8;&#x7B49;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;_Left&#x548C;_Right&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;True&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;False&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-keyword">operator</span>&gt;
+&#x529F;&#x80FD;&#xFF1A;&#x6D4B;&#x8BD5;&#x5DE6;&#x8FB9;&#x7684;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x662F;&#x5426;&#x5927;&#x4E8E;&#x53F3;&#x8FB9;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Left&#x548C;_Right&#x662F;&#x5F85;&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x662F;&#x57FA;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;_Left&gt;_Right&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;True&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;False&#x3002;
+
+<span class="hljs-built_in">map</span>::<span class="hljs-keyword">operator</span>&gt;=
+&#x529F;&#x80FD;&#xFF1A;&#x6D4B;&#x8BD5;&#x5DE6;&#x8FB9;&#x7684;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x662F;&#x5426;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x53F3;&#x8FB9;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Left&#x548C;_Right&#x662F;&#x5F85;&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x662F;&#x57FA;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;_Left&gt;=_Right&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;True&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;False&#x3002;
+
+<span class="hljs-built_in">map</span>::rbegin
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x53CD;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;rebgin&#x4E0E;&#x53CD;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x4E0E;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x7684;begin&#x4E00;&#x6837;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;const_reverse_iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E0D;&#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;reverse_iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x53EF;&#x88AB;&#x4FEE;&#x6539;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x53CD;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53CD;&#x5411;&#x53CC;&#x5411;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+
+<span class="hljs-built_in">map</span>::rend
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x53CD;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x6700;&#x540E;&#x5143;&#x7D20;&#x540E;&#x9762;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;rend&#x4E0E;&#x53CD;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x4E0E;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x7684;end&#x4E00;&#x6837;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;const_reverse_iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E0D;&#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;reverse_iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x53EF;&#x88AB;&#x4FEE;&#x6539;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x53CD;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x540E;&#x9762;&#x7684;&#x53CD;&#x5411;&#x53CC;&#x5411;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+
+<span class="hljs-built_in">map</span>::size
+&#x529F;&#x80FD;&#xFF1A;&#x8BA1;&#x7B97;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5927;&#x5C0F;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;size&#x51FD;&#x6570;&#x4F1A;&#x8BA1;&#x7B97;&#x51FA;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x957F;&#x5EA6;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5F53;&#x524D;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x957F;&#x5EA6;&#x3002;
+
+<span class="hljs-built_in">map</span>::swap
+&#x529F;&#x80FD;&#xFF1A;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x5143;&#x7D20;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Right&#x662F;&#x4E0E;&#x76EE;&#x6807;&#x5BB9;&#x5668;&#x4EA4;&#x6362;&#x5143;&#x7D20;&#x7684;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;&#x3002;
+
+<span class="hljs-built_in">map</span>::upper_bound
+&#x529F;&#x80FD;&#xFF1A;&#x6C42;&#x51FA;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x662F;&#x5927;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;_Key&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6392;&#x5E8F;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;const_iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x4E0D;&#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;iterator&#xFF0C;&#x5219;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x53EF;&#x88AB;&#x4FEE;&#x6539;&#x3002;
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x503C;&#x662F;&#x5927;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#xFF0C;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x6307;&#x5411;<span class="hljs-built_in">map</span>&#x5BB9;&#x5668;&#x7684;&#x7ED3;&#x675F;&#x7684;&#x5B9A;&#x4F4D;&#x5668;&#x3002;
+
+<span class="hljs-built_in">map</span>::value_comp
+&#x529F;&#x80FD;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x80FD;&#x786E;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x6B21;&#x5E8F;&#x7684;&#x51FD;&#x6570;&#x3002;
+&#x8BF4;&#x660E;&#xFF1A;&#x5BF9;&#x4E8E;&#x5BB9;&#x5668;m&#xFF0C;&#x5F53;e1&#xFF08;k1&#xFF0C;d1)&#x548C;e2&#xFF08;k2&#xFF0C;d2&#xFF09;&#x662F;&#x5B83;&#x7684;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#xFF1A;m.valve_comp(e1,e2)=m.key_comp(k1,k2)
+&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x80FD;&#x786E;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x6B21;&#x5E8F;&#x7684;&#x51FD;&#x6570;&#x3002;</code></pre>
+<!-- map.md ends here -->
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cath.md" class="navigation navigation-prev " aria-label="Previous page: cmath">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="random.html" class="navigation navigation-next " aria-label="Next page: random">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"map","level":"1.3.4","depth":2,"next":{"title":"random","level":"1.3.5","depth":2,"path":"Code/random.md","ref":"Code/random.md","articles":[]},"previous":{"title":"cmath","level":"1.3.3","depth":2,"path":"Code/cath.md","ref":"Code/cath.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Code/map.md","mtime":"2016-10-29T01:26:39.408Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-19T12:04:39.670Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

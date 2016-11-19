@@ -1,0 +1,454 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>algorithm · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="array.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Base/">
+            
+                <a href="../Base/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    头文件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="algorithm.html">
+            
+                <a href="algorithm.html">
+            
+                    
+                    algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="cath.md">
+            
+                <span>
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="random.html">
+            
+                <a href="random.html">
+            
+                    
+                    random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="vector.html">
+            
+                <a href="vector.html">
+            
+                    
+                    vector
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Experience/">
+            
+                <a href="../Experience/">
+            
+                    
+                    规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >algorithm</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- algorithm.md --- 
+;; 
+;; Description: 
+;; Author: Hongyi Wu(吴鸿毅)
+;; Email: wuhongyi@qq.com 
+;; Created: 三 8月 10 19:52:44 2016 (+0800)
+;; Last-Updated: 三 8月 10 19:53:35 2016 (+0800)
+;;           By: Hongyi Wu(吴鸿毅)
+;;     Update #: 1
+;; URL: http://wuhongyi.cn -->
+
+
+<h1 id="algorithm">algorithm</h1><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+
+adjacent_find &#x67E5;&#x627E;&#x76F8;&#x90BB;&#x7684;&#x4E24;&#x4E2A;&#x76F8;&#x540C;(&#x6216;&#x8005;&#x6709;&#x5176;&#x4ED6;&#x5173;&#x8054;)&#x5143;&#x7D20;
+all_of &#x5982;&#x679C;&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x8C13;&#x8BCD;&#x6D4B;&#x8BD5;&#x90FD;&#x4E3A;<span class="hljs-literal">true</span>,&#x5219;&#x8FD4;&#x56DE;<span class="hljs-literal">true</span> &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+any_of &#x5982;&#x679C;&#x5BF9;&#x4E8E;&#x4EFB;&#x610F;&#x5143;&#x7D20;&#x7684;&#x8C13;&#x8BCD;&#x6D4B;&#x8BD5;&#x90FD;&#x4E3A;<span class="hljs-literal">true</span>,&#x5219;&#x8FD4;&#x56DE;<span class="hljs-literal">true</span> &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+binary_search &#x786E;&#x5B9A;&#x5BB9;&#x5668;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x67D0;&#x4E2A;&#x5143;&#x7D20;
+copy &#x62F7;&#x8D1D;&#x5143;&#x7D20;&#x5230;&#x65B0;&#x7684;&#x4F4D;&#x7F6E;
+copy_backward &#x9006;&#x5E8F;&#x62F7;&#x8D1D;&#x5143;&#x7D20;
+copy_if &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+copy_n &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+count &#x8FD4;&#x56DE;&#x5339;&#x914D;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;&#x6570;&#x76EE;
+count_if &#x8FD4;&#x56DE;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5143;&#x7D20;&#x6570;&#x76EE; &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+equal &#x786E;&#x5B9A;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7686;&#x76F8;&#x540C;
+equal_range &#x641C;&#x7D22;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x7531;&#x76F8;&#x540C;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x5B50;&#x5E8F;&#x5217;
+fill &#x4E3A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x8D4B;&#x503C;
+fill_n &#x4E3A;&#x5E8F;&#x5217;&#x4E2D;&#x7ED9;&#x5B9A;&#x6570;&#x76EE;&#x7684;&#x5143;&#x7D20;&#x8D4B;&#x503C;
+find &#x5728;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x503C;&#x7684;&#x5143;&#x7D20;
+find_end &#x5728;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x6700;&#x540E;&#x51FA;&#x73B0;&#x7684;&#x5E8F;&#x5217;
+find_first_of &#x5728;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x7ED9;&#x5B9A;&#x96C6;&#x5408;&#x7684;&#x4EFB;&#x4E00;&#x5143;&#x7D20;
+find_if &#x5728;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5143;&#x7D20;
+find_if_not &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+for_each &#x4E3A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5E94;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x51FD;&#x6570;
+generate &#x5C06;&#x51FD;&#x6570;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x50A8;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;
+generate_n &#x5C06;N&#x6B21;&#x9A71;&#x52A8;&#x51FD;&#x6570;&#x7684;&#x7ED3;&#x679C;&#x50A8;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;
+includes &#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x662F;&#x5426;&#x662F;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x5B50;&#x96C6;
+inplace_merge &#x5185;&#x7F6E;&#x5F0F;&#x5F52;&#x5E76;
+is_heap &#x68C0;&#x67E5;&#x7ED9;&#x5B9A;&#x7684;&#x5E8F;&#x5217;&#x662F;&#x5426;&#x662F;&#x5806; &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+is_heap_until &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+is_partitioned &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+is_permutation &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+is_sorted &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+is_sorted_until &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+iter_swap &#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x6307;&#x5411;&#x7684;&#x5143;&#x7D20;
+lexicographical_compare &#x6309;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x662F;&#x5426;&#x5C0F;&#x4E8E;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+lower_bound &#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x4F46;&#x4E0D;&#x5F71;&#x54CD;&#x5E8F;&#x5217;&#x6709;&#x5E8F;&#x6027;&#x7684;&#x4F4D;&#x7F6E;
+make_heap &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5806;&#x5E76;&#x4EE5;&#x5E8F;&#x5217;&#x7684;&#x5F62;&#x5F0F;&#x8F93;&#x51FA;
+max &#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x95F4;&#x7684;&#x8F83;&#x5927;&#x8005; 
+max_element &#x8FD4;&#x56DE;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x8005;
+merge &#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x5F52;&#x5E76;&#x5904;&#x7406;
+min &#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x95F4;&#x7684;&#x8F83;&#x5C0F;&#x8005; 
+minmax &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+minmax_element &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+min_element
+mismatch &#x67E5;&#x627E;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#x4F4D;&#x7F6E;
+move &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+move_backward &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+next_permutation &#x4F9D;&#x7167;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x751F;&#x6210;&#x5E8F;&#x5217;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7A0D;&#x5927;&#x7684;&#x6392;&#x5217;
+none_of &#x5982;&#x679C;&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x8C13;&#x8BCD;&#x6D4B;&#x8BD5;&#x90FD;&#x4E3A;<span class="hljs-literal">false</span>,&#x5219;&#x8FD4;&#x56DE;<span class="hljs-literal">true</span> &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+nth_element &#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x81F3;&#x5B83;&#x7684;&#x6392;&#x5E8F;&#x4F4D;&#x7F6E;&#x5E76;&#x786E;&#x4FDD;&#x5B83;&#x5DE6;&#x8FB9;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x4E0D;&#x5927;&#x4E8E;&#x5B83;&#x53F3;&#x8FB9;&#x7684;&#x5143;&#x7D20;
+partial_sort &#x5C06;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x524D;N&#x4E2A;&#x5143;&#x7D20;&#x6392;&#x5E8F;
+partial_sort_copy &#x62F7;&#x8D1D;&#x5E76;&#x90E8;&#x5206;&#x6392;&#x5E8F;
+partition &#x5C06;&#x5143;&#x7D20;&#x5E8F;&#x5217;&#x5206;&#x6210;&#x4E24;&#x7EC4;
+partition_copy &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+partition_point &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+pop_heap &#x4ECE;&#x4E00;&#x4E2A;&#x5806;&#x4E2D;&#x79FB;&#x9664;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;
+prev_permutation &#x4F9D;&#x7167;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x751F;&#x6210;&#x5E8F;&#x5217;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7A0D;&#x5C0F;&#x7684;&#x6392;&#x5217;
+push_heap &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x81F3;&#x5806;
+random_shuffle &#x968F;&#x673A;&#x751F;&#x6210;&#x5143;&#x7D20;&#x7684;&#x4E00;&#x4E2A;&#x6392;&#x5217;
+remove &#x79FB;&#x9664;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;
+remove_copy &#x62F7;&#x8D1D;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x540C;&#x65F6;&#x5FFD;&#x7565;&#x90A3;&#x4E9B;&#x5339;&#x914D;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;
+remove_copy_if &#x62F7;&#x8D1D;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x540C;&#x65F6;&#x5FFD;&#x7565;&#x90A3;&#x4E9B;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5143;&#x7D20;
+remove_if &#x79FB;&#x9664;&#x5E8F;&#x5217;&#x4E2D;&#x6240;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5143;&#x7D20;
+replace &#x5C06;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5143;&#x7D20;&#x4EE5;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x503C;&#x66FF;&#x6362;
+replace_copy &#x62F7;&#x8D1D;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x5E76;&#x5C06;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x66FF;&#x6362;&#x4E3A;&#x65B0;&#x503C;
+replace_copy_if &#x62F7;&#x8D1D;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x5143;&#x7D20;&#x5E76;&#x66FF;&#x6362;&#x6389;&#x90A3;&#x4E9B;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5143;&#x7D20;
+replace_if &#x66FF;&#x6362;&#x6389;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5143;&#x7D20;
+reverse &#x5C06;&#x7ED9;&#x5B9A;&#x5E8F;&#x5217;&#x53CD;&#x8F6C;&#x987A;&#x5E8F;
+reverse_copy &#x4EE5;&#x9006;&#x5E8F;&#x62F7;&#x8D1D;&#x5143;&#x7D20;&#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x5E8F;&#x5217;&#x7684;&#x526F;&#x672C;
+rotate &#x8C03;&#x6362;&#x4E00;&#x4E9B;&#x5143;&#x7D20;&#x5230;&#x5E8F;&#x5217;&#x7684;&#x5DE6;&#x8FB9;
+rotate_copy &#x62F7;&#x8D1D;&#x5E76;&#x8C03;&#x6362;&#x5143;&#x7D20;
+search &#x641C;&#x7D22;&#x5B50;&#x5E8F;&#x5217;
+search_n &#x641C;&#x7D22;N&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x5143;&#x7D20;&#x62F7;&#x8D1D;
+set_difference &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x5DEE;&#x96C6;
+set_intersection &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6;
+set_symmetric_difference &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x5BF9;&#x79F0;&#x5DEE;
+set_union &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x4EA4;&#x96C6;
+shuffle &#xFF08;C++<span class="hljs-number">11</span>&#xFF09;
+sort &#x5C06;&#x5E8F;&#x5217;&#x6309;&#x5347;&#x5E8F;&#x6392;&#x5E8F;
+sort_heap &#x5C06;&#x5806;&#x8F6C;&#x53D8;&#x6210;&#x6709;&#x5E8F;&#x5E8F;&#x5217;
+stable_partition &#x5C06;&#x5143;&#x7D20;&#x5212;&#x5206;&#x6210;&#x4E24;&#x7EC4;&#x4E14;&#x7EF4;&#x6301;&#x539F;&#x6765;&#x7684;&#x5143;&#x7D20;&#x6B21;&#x5E8F;
+stable_sort &#x5C06;&#x5E8F;&#x5217;&#x6392;&#x5E8F;&#x5E76;&#x4E14;&#x7EF4;&#x6301;&#x76F8;&#x7B49;&#x5143;&#x7D20;&#x7684;&#x539F;&#x59CB;&#x6B21;&#x5E8F;
+swap &#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x503C;
+swap_ranges &#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x5143;&#x7D20;
+transform &#x901A;&#x8FC7;&#x7ED9;&#x5B9A;&#x51FD;&#x6570;&#x8F6C;&#x6362;&#x5E8F;&#x5217;&#x5143;&#x7D20;
+unique &#x79FB;&#x9664;&#x8FDE;&#x7EED;&#x7684;&#x91CD;&#x590D;&#x5143;&#x7D20;
+unique_copy &#x62F7;&#x8D1D;&#x5E8F;&#x5217;&#x5E76;&#x5FFD;&#x7565;&#x76F8;&#x540C;&#x5143;&#x7D20;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65E0;&#x91CD;&#x590D;&#x5143;&#x7D20;&#x7684;&#x96C6;&#x5408;
+upper_bound &#x641C;&#x7D22;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x5E76;&#x80FD;&#x7EF4;&#x6301;&#x5E8F;&#x5217;&#x6709;&#x5E8F;&#x6027;&#x7684;&#x4F4D;&#x7F6E;(&#x7B2C;&#x4E00;&#x4E2A;&#x7A0D;&#x5927;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x4F4D;&#x7F6E;)</code></pre>
+<!-- algorithm.md ends here -->
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 头文件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="array.html" class="navigation navigation-next " aria-label="Next page: array">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"algorithm","level":"1.3.1","depth":2,"next":{"title":"array","level":"1.3.2","depth":2,"path":"Code/array.md","ref":"Code/array.md","articles":[]},"previous":{"title":"头文件","level":"1.3","depth":1,"path":"Code/README.md","ref":"Code/README.md","articles":[{"title":"algorithm","level":"1.3.1","depth":2,"path":"Code/algorithm.md","ref":"Code/algorithm.md","articles":[]},{"title":"array","level":"1.3.2","depth":2,"path":"Code/array.md","ref":"Code/array.md","articles":[]},{"title":"cmath","level":"1.3.3","depth":2,"path":"Code/cath.md","ref":"Code/cath.md","articles":[]},{"title":"map","level":"1.3.4","depth":2,"path":"Code/map.md","ref":"Code/map.md","articles":[]},{"title":"random","level":"1.3.5","depth":2,"path":"Code/random.md","ref":"Code/random.md","articles":[]},{"title":"vector","level":"1.3.6","depth":2,"path":"Code/vector.md","ref":"Code/vector.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Code/algorithm.md","mtime":"2016-10-29T01:26:39.409Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-19T12:04:39.670Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
