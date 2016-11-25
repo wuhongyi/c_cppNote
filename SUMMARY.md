@@ -9,5 +9,9 @@
   - [map](Code/map.md)
   - [random](Code/random.md)
   - [vector](Code/vector.md)
+* [技术储备](Technical/README.md)
+  - [map](Technical/map.md)
+  - [sstream](Technical/sstream.md)
+  - [string](Technical/string.md)
 * [规范](Experience/README.md)
 
