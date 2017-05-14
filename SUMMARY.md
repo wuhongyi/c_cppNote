@@ -2,6 +2,8 @@
 
 * [简介](README.md)
 * [基础](Base/README.md)
+  - [cast](Base/cast.md)
+  - [extern C](Base/externC.md)
 * [头文件](Code/README.md)
   - [algorithm](Code/algorithm.md)
   - [array](Code/array.md)
@@ -13,5 +15,7 @@
   - [map](Technical/map.md)
   - [sstream](Technical/sstream.md)
   - [string](Technical/string.md)
+* [外部库](ExternalLibrary/README.md)
+  - [fftw3](ExternalLibrary/fftw3.md)
 * [规范](Experience/README.md)
 
