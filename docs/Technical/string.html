@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>string · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>string · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -402,15 +402,17 @@
 ;;           By: Hongyi Wu(吴鸿毅)
 ;;     Update #: 1
 ;; URL: http://wuhongyi.cn -->
-
-
-<h1 id="string">string</h1><p>C++&#x80FD;&#x591F;&#x6267;&#x884C;&#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5C06;C&#x5B57;&#x7B26;&#x4E32;&#x50A8;&#x5B58;&#x5728;string&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x5DE5;&#x4F5C;&#xFF1A;</p><pre><code class="lang-cpp">char a_c_string[]=&apos;&apos;This is my C string.&apos;&apos;;
+<h1 id="string">string</h1>
+<p>C++&#x80FD;&#x591F;&#x6267;&#x884C;&#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5C06;C&#x5B57;&#x7B26;&#x4E32;&#x50A8;&#x5B58;&#x5728;string&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-cpp">char a_c_string[]=&apos;&apos;This is my C string.&apos;&apos;;
 string string_variable;
-string_nariable=a_c_string;</code></pre>
-<p>string&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;C&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x5BF9;&#x5E94;&#x4E8E;string&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;C&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5FC5;&#x987B;&#x6267;&#x884C;&#x663E;&#x793A;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;&#x8FD9;&#x9700;&#x8981;&#x7528;&#x5230;string&#x6210;&#x5458;&#x51FD;&#x6570;c_str()&#x3002;&#x7528;strcpy&#x6765;&#x590D;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p><pre><code class="lang-cpp"><span class="hljs-built_in">strcpy</span>(a_c_string,string_variable.c_str());</code></pre>
-<p>&#x6CE8;&#x610F;&#xFF0C;&#x9700;&#x8981;&#x7528;strcpy&#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x590D;&#x5236;&#x3002;&#x6210;&#x5458;&#x51FD;&#x6570;c_str()&#x8FD4;&#x56DE;&#x4E0E;string&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x4E2A;C&#x5B57;&#x7B26;&#x4E32;&#x3002;</p><!-- string.md ends here -->
-
-
+string_nariable=a_c_string;
+</code></pre>
+<p>string&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;C&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x5BF9;&#x5E94;&#x4E8E;string&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;C&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5FC5;&#x987B;&#x6267;&#x884C;&#x663E;&#x793A;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;&#x8FD9;&#x9700;&#x8981;&#x7528;&#x5230;string&#x6210;&#x5458;&#x51FD;&#x6570;c_str()&#x3002;&#x7528;strcpy&#x6765;&#x590D;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">strcpy</span>(a_c_string,string_variable.c_str());
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x9700;&#x8981;&#x7528;strcpy&#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x590D;&#x5236;&#x3002;&#x6210;&#x5458;&#x51FD;&#x6570;c_str()&#x8FD4;&#x56DE;&#x4E0E;string&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x4E2A;C&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<!-- string.md ends here -->
 
                                 
                                 </section>
@@ -454,7 +456,7 @@ string_nariable=a_c_string;</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"string","level":"1.4.3","depth":2,"next":{"title":"外部库","level":"1.5","depth":1,"path":"ExternalLibrary/README.md","ref":"ExternalLibrary/README.md","articles":[{"title":"fftw3","level":"1.5.1","depth":2,"path":"ExternalLibrary/fftw3.md","ref":"ExternalLibrary/fftw3.md","articles":[]}]},"previous":{"title":"sstream","level":"1.4.2","depth":2,"path":"Technical/sstream.md","ref":"Technical/sstream.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Technical/string.md","mtime":"2016-11-25T10:41:36.629Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2017-05-15T13:48:52.527Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"string","level":"1.4.3","depth":2,"next":{"title":"外部库","level":"1.5","depth":1,"path":"ExternalLibrary/README.md","ref":"ExternalLibrary/README.md","articles":[{"title":"fftw3","level":"1.5.1","depth":2,"path":"ExternalLibrary/fftw3.md","ref":"ExternalLibrary/fftw3.md","articles":[]}]},"previous":{"title":"sstream","level":"1.4.2","depth":2,"path":"Technical/sstream.md","ref":"Technical/sstream.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Technical/string.md","mtime":"2016-11-25T10:41:36.629Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T12:50:23.440Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
