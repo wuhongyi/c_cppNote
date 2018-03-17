@@ -415,18 +415,200 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 六 3月 17 16:37:16 2018 (+0800)
-;; Last-Updated: 六 3月 17 16:46:57 2018 (+0800)
+;; Last-Updated: 六 3月 17 17:01:42 2018 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 2
+;;     Update #: 3
 ;; URL: http://wuhongyi.cn -->
 <h1 id="&#x56DE;&#x8F66;&#x7B26;&#x548C;&#x6362;&#x884C;&#x7B26;">&#x56DE;&#x8F66;&#x7B26;&#x548C;&#x6362;&#x884C;&#x7B26;</h1>
 <pre><code class="lang-text">Unix&#x7CFB;&#x7EDF;&#x91CC;&#xFF0C;&#x6BCF;&#x884C;&#x7ED3;&#x5C3E;&#x53EA;&#x6709;&#x201C;&lt;&#x6362;&#x884C;&gt;&#x201D;&#xFF0C;&#x5373;&#x201C;\n&#x201D;&#xFF1B;
-Windows&#x7CFB;&#x7EDF;&#x91CC;&#x9762;&#xFF0C;&#x6BCF;&#x884C;&#x7ED3;&#x5C3E;&#x662F;&#x201C;&lt;&#x6362;&#x884C;&gt;&lt;&#x56DE;&#x8F66;&gt;&#x201D;&#xFF0C;&#x5373;&#x201C;\n\r&#x201D;&#xFF1B;
+Windows&#x7CFB;&#x7EDF;&#x91CC;&#x9762;&#xFF0C;&#x6BCF;&#x884C;&#x7ED3;&#x5C3E;&#x662F;&#x201C;&lt;&#x6362;&#x884C;&gt;&lt;&#x56DE;&#x8F66;&gt;&#x201D;&#xFF0C;&#x5373;&#x201C;\r\n&#x201D;&#xFF1B;
 Mac&#x7CFB;&#x7EDF;&#x91CC;&#xFF0C;&#x6BCF;&#x884C;&#x7ED3;&#x5C3E;&#x662F;&#x201C;&lt;&#x56DE;&#x8F66;&gt;&#x201D;&#x3002;
 &#x4E00;&#x4E2A;&#x76F4;&#x63A5;&#x540E;&#x679C;&#x662F;&#xFF0C;Unix/Mac&#x7CFB;&#x7EDF;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5728;Windows&#x91CC;&#x6253;&#x5F00;&#x7684;&#x8BDD;&#xFF0C;&#x6240;&#x6709;&#x6587;&#x5B57;&#x4F1A;&#x53D8;&#x6210;&#x4E00;&#x884C;&#xFF1B;
 &#x800C;Windows&#x91CC;&#x7684;&#x6587;&#x4EF6;&#x5728;Unix/Mac&#x4E0B;&#x6253;&#x5F00;&#x7684;&#x8BDD;&#xFF0C;&#x5728;&#x6BCF;&#x884C;&#x7684;&#x7ED3;&#x5C3E;&#x53EF;&#x80FD;&#x4F1A;&#x591A;&#x51FA;&#x4E00;&#x4E2A;^M&#x7B26;&#x53F7;&#x3002;
 
 Linux&#x4E2D;&#x9047;&#x5230;&#x6362;&#x884C;&#x7B26;(&quot;\n&quot;)&#x4F1A;&#x8FDB;&#x884C;&#x56DE;&#x8F66;+&#x6362;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x56DE;&#x8F66;&#x7B26;&#x53CD;&#x800C;&#x53EA;&#x4F1A;&#x4F5C;&#x4E3A;&#x63A7;&#x5236;&#x5B57;&#x7B26;(&quot;^M&quot;)&#x663E;&#x793A;&#xFF0C;&#x4E0D;&#x53D1;&#x751F;&#x56DE;&#x8F66;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x800C;windows&#x4E2D;&#x8981;&#x56DE;&#x8F66;&#x7B26;+&#x6362;&#x884C;&#x7B26;(&quot;\r\n&quot;)&#x624D;&#x4F1A;&#x56DE;&#x8F66;+&#x6362;&#x884C;&#xFF0C;&#x7F3A;&#x5C11;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x7B26;&#x6216;&#x8005;&#x987A;&#x5E8F;&#x4E0D;&#x5BF9;&#x90FD;&#x4E0D;&#x80FD;&#x6B63;&#x786E;&#x7684;&#x53E6;&#x8D77;&#x4E00;&#x884C;&#x3002;
+</code></pre>
+<pre><code class="lang-cpp"><span class="hljs-comment">// main.cc --- </span>
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// Description: </span>
+<span class="hljs-comment">// Author: Hongyi Wu(&#x5434;&#x9E3F;&#x6BC5;)</span>
+<span class="hljs-comment">// Email: wuhongyi@qq.com </span>
+<span class="hljs-comment">// Created: &#x65E5; 2&#x6708; 25 14:33:00 2018 (+0800)</span>
+<span class="hljs-comment">// Last-Updated: &#x516D; 3&#x6708; 17 16:55:47 2018 (+0800)</span>
+<span class="hljs-comment">//           By: Hongyi Wu(&#x5434;&#x9E3F;&#x6BC5;)</span>
+<span class="hljs-comment">//     Update #: 24</span>
+<span class="hljs-comment">// URL: http://wuhongyi.cn </span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;RVersion.h&quot;</span>//&#x7248;&#x672C;&#x5224;&#x65AD;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TApplication.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TArrow.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TAxis.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TBenchmark.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TBranch.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TBrowser.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TCanvas.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TChain.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TColor.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TCutG.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TDatime.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TError.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TF1.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TF2.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TFile.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TFitResult.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TFormula.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TGaxis.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TGraph.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TGraph2D.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TGraphErrors.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TH1.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TH2.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TH3.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;THStack.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TLatex.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TLegend.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TLegendEntry.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TLine.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TList.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TLorentzVector.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TMarker.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TMath.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TMatrixD.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TMatrixDEigen.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TMultiGraph.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TNtuple.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TObject.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TPad.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TPaveLabel.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TPaveStats.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TPaveText.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TRandom.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TRandom1.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TRandom2.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TRandom3.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TRint.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TROOT.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TSlider.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TSpectrum.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TSpectrum2.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TStopwatch.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TString.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TStyle.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TSystem.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TTimer.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TTimeStamp.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TTree.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TVector3.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;TVectorD.h&quot;</span></span>
+
+<span class="hljs-comment">// #define NDEBUG</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cassert&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cfloat&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;climits&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cmath&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;complex&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdlib&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ctime&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;deque&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fstream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iomanip&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;list&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;map&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;queue&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;set&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sstream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stack&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-comment">//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+  <span class="hljs-comment">// Create an interactive ROOT application</span>
+  TRint *theApp = <span class="hljs-keyword">new</span> TRint(<span class="hljs-string">&quot;Rint&quot;</span>, &amp;argc, argv);
+
+  TCanvas *c1 = <span class="hljs-keyword">new</span> TCanvas(<span class="hljs-string">&quot;c1&quot;</span>,<span class="hljs-string">&quot;&quot;</span>,<span class="hljs-number">600</span>,<span class="hljs-number">400</span>);
+
+  <span class="hljs-keyword">double</span> tau = <span class="hljs-number">2000</span>;
+
+  TGraph *g1 = <span class="hljs-keyword">new</span> TGraph();
+  <span class="hljs-comment">// g1 = new TGraph(n, x, y);//int float double</span>
+  g1-&gt;SetTitle(<span class="hljs-string">&quot;&quot;</span>);
+  g1-&gt;GetXaxis()-&gt;SetTitle(<span class="hljs-string">&quot;&quot;</span>);
+  g1-&gt;GetYaxis()-&gt;SetTitle(<span class="hljs-string">&quot;&quot;</span>);
+  <span class="hljs-comment">// g1-&gt;SetLineColor(Color_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetLineStyle(Style_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetLineWidth(Width_t);//1</span>
+  <span class="hljs-comment">// g1-&gt;SetFillStyle(Style_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetFillColor(Color_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetMarkerColor(Color_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetMarkerStyle(Style_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetMarkerSize(Size_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetMinimum(Double_t);</span>
+  <span class="hljs-comment">// g1-&gt;SetMaximum(Double_t);</span>
+  <span class="hljs-comment">// g1-&gt;IsInside(Double_t x, Double_t y);// int   &#x5224;&#x65AD;&#xFF08;x&#xFF0C;y&#xFF09;&#x662F;&#x5426;&#x5728;TCut&#x9009;&#x5B9A;&#x7684;&#x8303;&#x56F4;</span>
+  <span class="hljs-comment">// g1-&gt;Eval(Double_t x);//double &#x83B7;&#x5F97;x&#x5BF9;&#x5E94;&#x7684;y&#x503C;</span>
+  <span class="hljs-comment">// g1-&gt;GetN();//int &#x83B7;&#x5F97;&#x70B9;&#x6570;</span>
+
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000</span>; ++i)
+    {
+      <span class="hljs-keyword">if</span>(i &lt; <span class="hljs-number">1000</span>)
+    {
+      g1-&gt;SetPoint(i, i, <span class="hljs-number">2000</span>+gRandom-&gt;Gaus(<span class="hljs-number">0</span>, <span class="hljs-number">30</span>));<span class="hljs-comment">//i = 0~N-1</span>
+
+    }
+      <span class="hljs-keyword">else</span>
+    {
+      g1-&gt;SetPoint(i, i, <span class="hljs-number">2000</span>+gRandom-&gt;Gaus(<span class="hljs-number">0</span>, <span class="hljs-number">30</span>)+<span class="hljs-number">12000</span>*TMath::Exp(-(i<span class="hljs-number">-1000</span>)/tau));
+
+    }
+    }
+
+  g1-&gt;Draw(<span class="hljs-string">&quot;A*&quot;</span>);
+  c1-&gt;Update();
+
+
+  <span class="hljs-built_in">std</span>::ofstream writedata;<span class="hljs-comment">//fstream</span>
+  writedata.open(<span class="hljs-string">&quot;waveform.coe&quot;</span>);<span class="hljs-comment">//ios::bin ios::app</span>
+  <span class="hljs-keyword">if</span>(!writedata.is_open())
+    {
+      <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;can&apos;t open file.&quot;</span>&lt;&lt;<span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+  writedata&lt;&lt;<span class="hljs-string">&quot;MEMORY_INITIALIZATION_RADIX=16;&quot;</span>&lt;&lt;<span class="hljs-string">&quot;\r\n&quot;</span>;
+  writedata&lt;&lt;<span class="hljs-string">&quot;MEMORY_INITIALIZATION_VECTOR=&quot;</span>&lt;&lt;<span class="hljs-string">&quot;\r\n&quot;</span>;
+
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000</span>; ++i)
+    {
+      <span class="hljs-comment">// std::cout&lt;&lt;std::dec&lt;&lt;i&lt;&lt;&quot;  &quot;&lt;&lt;std::hex&lt;&lt;std::setw(4)&lt;&lt;std::setfill(&apos;0&apos;) &lt;&lt;int(g1-&gt;GetY()[i])&lt;&lt;std::endl;</span>
+      <span class="hljs-keyword">if</span>(i==<span class="hljs-number">9999</span>)
+    {
+      writedata&lt;&lt;<span class="hljs-built_in">std</span>::hex&lt;&lt;<span class="hljs-built_in">std</span>::setw(<span class="hljs-number">4</span>)&lt;&lt;<span class="hljs-built_in">std</span>::setfill(<span class="hljs-string">&apos;0&apos;</span>) &lt;&lt;<span class="hljs-keyword">int</span>(g1-&gt;GetY()[i])&lt;&lt;<span class="hljs-string">&quot;;&quot;</span>&lt;&lt;<span class="hljs-string">&quot;\r\n&quot;</span>;
+    }
+      <span class="hljs-keyword">else</span>
+    {
+      writedata&lt;&lt;<span class="hljs-built_in">std</span>::hex&lt;&lt;<span class="hljs-built_in">std</span>::setw(<span class="hljs-number">4</span>)&lt;&lt;<span class="hljs-built_in">std</span>::setfill(<span class="hljs-string">&apos;0&apos;</span>) &lt;&lt;<span class="hljs-keyword">int</span>(g1-&gt;GetY()[i])&lt;&lt;<span class="hljs-string">&quot;,&quot;</span>&lt;&lt;<span class="hljs-string">&quot;\r\n&quot;</span>;
+    }
+    }
+
+  writedata.close();
+
+  <span class="hljs-comment">// and enter the event loop...</span>
+  theApp-&gt;Run();
+  <span class="hljs-comment">// delete theApp;</span>
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// main.cc ends here</span>
 </code></pre>
 <hr>
 <blockquote>
@@ -472,7 +654,7 @@ Linux&#x4E2D;&#x9047;&#x5230;&#x6362;&#x884C;&#x7B26;(&quot;\n&quot;)&#x4F1A;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"回车符和换行符","level":"1.6.1","depth":2,"previous":{"title":"规范","level":"1.6","depth":1,"path":"Experience/README.md","ref":"Experience/README.md","articles":[{"title":"回车符和换行符","level":"1.6.1","depth":2,"path":"Experience/ReturnNewline.md","ref":"Experience/ReturnNewline.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Experience/ReturnNewline.md","mtime":"2018-03-17T08:46:57.904Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-17T08:47:08.109Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"回车符和换行符","level":"1.6.1","depth":2,"previous":{"title":"规范","level":"1.6","depth":1,"path":"Experience/README.md","ref":"Experience/README.md","articles":[{"title":"回车符和换行符","level":"1.6.1","depth":2,"path":"Experience/ReturnNewline.md","ref":"Experience/ReturnNewline.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Experience/ReturnNewline.md","mtime":"2018-03-17T09:01:42.891Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-17T09:01:51.540Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
