@@ -4,9 +4,9 @@
 ;; Author: Hongyi Wu(吴鸿毅)
 ;; Email: wuhongyi@qq.com 
 ;; Created: 三 8月 10 18:46:27 2016 (+0800)
-;; Last-Updated: 五 10月 13 23:28:01 2017 (+0800)
+;; Last-Updated: 六 4月 21 20:20:57 2018 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
-;;     Update #: 2
+;;     Update #: 3
 ;; URL: http://wuhongyi.cn -->
 
 # 简介
@@ -18,6 +18,6 @@
 
 [-L、-rpath和-rpath-link的区别](http://blog.csdn.net/q1302182594/article/details/42102961)
 
-
+> http://www.runoob.com/cplusplus/cpp-files-streams.html
 
 <!-- README.md ends here -->
