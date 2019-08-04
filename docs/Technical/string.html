@@ -1,430 +1,188 @@
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>string · GitBook</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
-        
-        
-        
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>string &mdash; Template 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
     
-    <link rel="stylesheet" href="../gitbook/style.css">
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="sys" href="sys.html" />
+    <link rel="prev" title="sstream" href="sstream.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Template
+          
+
+          
+          </a>
+
+          
             
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
             
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+          
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="sys.html" />
-    
-    
-    <link rel="prev" href="sstream.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
 
-            
-                <nav role="navigation">
-                
+          
+        </div>
 
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    简介
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="../Base/">
-            
-                <a href="../Base/">
-            
-                    
-                    基础
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.1" data-path="../Base/cast.html">
-            
-                <a href="../Base/cast.html">
-            
-                    
-                    cast
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.2" data-path="../Base/externC.html">
-            
-                <a href="../Base/externC.html">
-            
-                    
-                    extern C
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="../Code/">
-            
-                <a href="../Code/">
-            
-                    
-                    头文件
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1" data-path="../Code/algorithm.html">
-            
-                <a href="../Code/algorithm.html">
-            
-                    
-                    algorithm
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../Code/array.html">
-            
-                <a href="../Code/array.html">
-            
-                    
-                    array
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3" data-path="../Code/cath.md">
-            
-                <span>
-            
-                    
-                    cmath
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.4" data-path="../Code/map.html">
-            
-                <a href="../Code/map.html">
-            
-                    
-                    map
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.5" data-path="../Code/random.html">
-            
-                <a href="../Code/random.html">
-            
-                    
-                    random
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.6" data-path="../Code/vector.html">
-            
-                <a href="../Code/vector.html">
-            
-                    
-                    vector
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    技术储备
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.1" data-path="map.html">
-            
-                <a href="map.html">
-            
-                    
-                    map
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2" data-path="sstream.html">
-            
-                <a href="sstream.html">
-            
-                    
-                    sstream
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.4.3" data-path="string.html">
-            
-                <a href="string.html">
-            
-                    
-                    string
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4" data-path="sys.html">
-            
-                <a href="sys.html">
-            
-                    
-                    sys
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../ExternalLibrary/">
-            
-                <a href="../ExternalLibrary/">
-            
-                    
-                    外部库
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.5.1" data-path="../ExternalLibrary/fftw3.html">
-            
-                <a href="../ExternalLibrary/fftw3.html">
-            
-                    
-                    fftw3
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6" data-path="../Experience/">
-            
-                <a href="../Experience/">
-            
-                    
-                    规范
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.6.1" data-path="../Experience/ReturnNewline.html">
-            
-                <a href="../Experience/ReturnNewline.html">
-            
-                    
-                    回车符和换行符
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">简介</a></li>
+</ul>
+<p class="caption"><span class="caption-text">基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Base/README.html">base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/cast.html">cast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/externC.html">extern “C” 用法</a></li>
+</ul>
+<p class="caption"><span class="caption-text">头文件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Code/README.html">C++ 头文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/algorithm.html">algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/array.html">array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/cmath.html">cmath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/random.html">random</a></li>
+</ul>
+<p class="caption"><span class="caption-text">技术储备</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sstream.html">sstream</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sys.html">sys</a></li>
+</ul>
+<p class="caption"><span class="caption-text">外部库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/README.html">外部库的调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/fftw3.html">fftw3</a></li>
+</ul>
+<p class="caption"><span class="caption-text">规范</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/README.html">规范</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/ReturnNewline.html">回车符和换行符</a></li>
 </ul>
 
-
-                </nav>
             
-        
-    </div>
+          
+        </div>
+      </div>
+    </nav>
 
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-<div class="book-header" role="navigation">
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Template</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
     
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>string</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Technical/string.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
 
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >string</a>
-    </h1>
+  
+  <hr/>
 </div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <!-- string.md --- 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- string.md --- 
 ;; 
 ;; Description: 
 ;; Author: Hongyi Wu(吴鸿毅)
@@ -433,95 +191,68 @@
 ;; Last-Updated: 五 11月 25 18:41:36 2016 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
 ;;     Update #: 1
-;; URL: http://wuhongyi.cn -->
-<h1 id="string">string</h1>
-<p>C++&#x80FD;&#x591F;&#x6267;&#x884C;&#x81EA;&#x52A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5C06;C&#x5B57;&#x7B26;&#x4E32;&#x50A8;&#x5B58;&#x5728;string&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x5DE5;&#x4F5C;&#xFF1A;</p>
-<pre><code class="lang-cpp">char a_c_string[]=&apos;&apos;This is my C string.&apos;&apos;;
+;; URL: http://wuhongyi.cn --><div class="section" id="string">
+<h1>string<a class="headerlink" href="#string" title="永久链接至标题">¶</a></h1>
+<p>C++能够执行自动类型转换，所以可以将C字符串储存在string类型的变量中。例如以下代码可以很好地工作：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>char a_c_string[]=&#39;&#39;This is my C string.&#39;&#39;;
 string string_variable;
 string_nariable=a_c_string;
-</code></pre>
-<p>string&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;C&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x5BF9;&#x5E94;&#x4E8E;string&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;C&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5FC5;&#x987B;&#x6267;&#x884C;&#x663E;&#x793A;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x3002;&#x8FD9;&#x9700;&#x8981;&#x7528;&#x5230;string&#x6210;&#x5458;&#x51FD;&#x6570;c_str()&#x3002;&#x7528;strcpy&#x6765;&#x590D;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
-<pre><code class="lang-cpp"><span class="hljs-built_in">strcpy</span>(a_c_string,string_variable.c_str());
-</code></pre>
-<p>&#x6CE8;&#x610F;&#xFF0C;&#x9700;&#x8981;&#x7528;strcpy&#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x590D;&#x5236;&#x3002;&#x6210;&#x5458;&#x51FD;&#x6570;c_str()&#x8FD4;&#x56DE;&#x4E0E;string&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x4E2A;C&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
-<!-- string.md ends here -->
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
+</pre></div>
 </div>
-
-                        </div>
-                    </div>
-                
-            </div>
-
-            
-                
-                <a href="sstream.html" class="navigation navigation-prev " aria-label="Previous page: sstream">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="sys.html" class="navigation navigation-next " aria-label="Next page: sys">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"string","level":"1.4.3","depth":2,"next":{"title":"sys","level":"1.4.4","depth":2,"path":"Technical/sys.md","ref":"Technical/sys.md","articles":[]},"previous":{"title":"sstream","level":"1.4.2","depth":2,"path":"Technical/sstream.md","ref":"Technical/sstream.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Technical/string.md","mtime":"2018-05-14T09:21:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-05-18T09:58:28.871Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+<p>string对象不能自动转换为C字符串。为了获得对应于string对象的一个C字符串，必须执行显示的类型转换。这需要用到string成员函数c_str()。用strcpy来复制字符串。</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">strcpy</span><span class="p">(</span><span class="n">a_c_string</span><span class="p">,</span><span class="n">string_variable</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+</pre></div>
 </div>
+<p>注意，需要用strcpy函数来进行复制。成员函数c_str()返回与string调用对象对应的一个C字符串。</p>
+<!-- string.md ends here --></div>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
 
-    </body>
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sys.html" class="btn btn-neutral float-right" title="sys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sstream.html" class="btn btn-neutral float-left" title="sstream" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Hongyi Wu(吴鸿毅)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
-

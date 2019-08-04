@@ -1,430 +1,195 @@
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>extern C · GitBook</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
-        
-        
-        
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>extern “C” 用法 &mdash; Template 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
     
-    <link rel="stylesheet" href="../gitbook/style.css">
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="C++ 头文件" href="../Code/README.html" />
+    <link rel="prev" title="cast" href="cast.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Template
+          
+
+          
+          </a>
+
+          
             
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
             
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+          
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="../Code/" />
-    
-    
-    <link rel="prev" href="cast.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
 
-            
-                <nav role="navigation">
-                
+          
+        </div>
 
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    简介
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    基础
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.1" data-path="cast.html">
-            
-                <a href="cast.html">
-            
-                    
-                    cast
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.2.2" data-path="externC.html">
-            
-                <a href="externC.html">
-            
-                    
-                    extern C
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="../Code/">
-            
-                <a href="../Code/">
-            
-                    
-                    头文件
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1" data-path="../Code/algorithm.html">
-            
-                <a href="../Code/algorithm.html">
-            
-                    
-                    algorithm
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../Code/array.html">
-            
-                <a href="../Code/array.html">
-            
-                    
-                    array
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3" data-path="../Code/cath.md">
-            
-                <span>
-            
-                    
-                    cmath
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.4" data-path="../Code/map.html">
-            
-                <a href="../Code/map.html">
-            
-                    
-                    map
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.5" data-path="../Code/random.html">
-            
-                <a href="../Code/random.html">
-            
-                    
-                    random
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.6" data-path="../Code/vector.html">
-            
-                <a href="../Code/vector.html">
-            
-                    
-                    vector
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="../Technical/">
-            
-                <a href="../Technical/">
-            
-                    
-                    技术储备
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.1" data-path="../Technical/map.html">
-            
-                <a href="../Technical/map.html">
-            
-                    
-                    map
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2" data-path="../Technical/sstream.html">
-            
-                <a href="../Technical/sstream.html">
-            
-                    
-                    sstream
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="../Technical/string.html">
-            
-                <a href="../Technical/string.html">
-            
-                    
-                    string
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4" data-path="../Technical/sys.html">
-            
-                <a href="../Technical/sys.html">
-            
-                    
-                    sys
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../ExternalLibrary/">
-            
-                <a href="../ExternalLibrary/">
-            
-                    
-                    外部库
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.5.1" data-path="../ExternalLibrary/fftw3.html">
-            
-                <a href="../ExternalLibrary/fftw3.html">
-            
-                    
-                    fftw3
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6" data-path="../Experience/">
-            
-                <a href="../Experience/">
-            
-                    
-                    规范
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.6.1" data-path="../Experience/ReturnNewline.html">
-            
-                <a href="../Experience/ReturnNewline.html">
-            
-                    
-                    回车符和换行符
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">简介</a></li>
+</ul>
+<p class="caption"><span class="caption-text">基础</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cast.html">cast</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">extern “C” 用法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">extern “C”的含义</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#extern">extern关键字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extern-c-c">被extern “C”修饰的变量和函数是按照C语言方式编译和链接的</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">头文件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Code/README.html">C++ 头文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/algorithm.html">algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/array.html">array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/cmath.html">cmath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/random.html">random</a></li>
+</ul>
+<p class="caption"><span class="caption-text">技术储备</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sstream.html">sstream</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/string.html">string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sys.html">sys</a></li>
+</ul>
+<p class="caption"><span class="caption-text">外部库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/README.html">外部库的调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/fftw3.html">fftw3</a></li>
+</ul>
+<p class="caption"><span class="caption-text">规范</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/README.html">规范</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/ReturnNewline.html">回车符和换行符</a></li>
 </ul>
 
-
-                </nav>
             
-        
-    </div>
+          
+        </div>
+      </div>
+    </nav>
 
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-<div class="book-header" role="navigation">
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Template</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
     
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>extern “C” 用法</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Base/externC.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
 
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >extern C</a>
-    </h1>
+  
+  <hr/>
 </div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <!-- externC.md --- 
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- externC.md --- 
 ;; 
 ;; Description: 
 ;; Author: Hongyi Wu(吴鸿毅)
@@ -433,209 +198,194 @@
 ;; Last-Updated: 六 5月 13 12:02:31 2017 (+0800)
 ;;           By: Hongyi Wu(吴鸿毅)
 ;;     Update #: 2
-;; URL: http://wuhongyi.cn -->
-<h1 id="extern-c-&#x7528;&#x6CD5;">extern &quot;C&quot; &#x7528;&#x6CD5;</h1>
-<p>C++&#x4FDD;&#x7559;&#x4E86;&#x4E00;&#x90E8;&#x5206;&#x8FC7;&#x7A0B;&#x5F0F;&#x8BED;&#x8A00;&#x7684;&#x7279;&#x70B9;&#xFF0C;&#x56E0;&#x800C;&#x5B83;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E0D;&#x5C5E;&#x4E8E;&#x4EFB;&#x4F55;&#x7C7B;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x3002;&#x4F46;&#x662F;&#xFF0C;C++&#x6BD5;&#x7ADF;&#x662F;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#xFF0C;&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x51FD;&#x6570;&#x7684;&#x91CD;&#x8F7D;&#xFF0C;C++&#x5BF9;&#x5168;&#x5C40;&#x51FD;&#x6570;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E0E;C&#x6709;&#x660E;&#x663E;&#x7684;&#x4E0D;&#x540C;&#x3002;
-extern &quot;C&quot;&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x5B9E;&#x73B0;C++&#x4EE3;&#x7801;&#x8C03;&#x7528;&#x5176;&#x4ED6;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x3002;&#x52A0;&#x4E0A;extern &quot;C&quot;&#x540E;&#xFF0C;&#x4F1A;&#x6307;&#x793A;&#x7F16;&#x8BD1;&#x5668;&#x8FD9;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x6309;C&#x8BED;&#x8A00;&#x7684;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;C++&#x7684;&#x3002;&#x7531;&#x4E8E;C++&#x652F;&#x6301;&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#xFF0C;&#x56E0;&#x6B64;&#x7F16;&#x8BD1;&#x5668;&#x7F16;&#x8BD1;&#x51FD;&#x6570;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x5C06;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x4E5F;&#x52A0;&#x5230;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x51FD;&#x6570;&#x540D;&#xFF1B;&#x800C;C&#x8BED;&#x8A00;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#xFF0C;&#x56E0;&#x6B64;&#x7F16;&#x8BD1;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x7684;&#x51FD;&#x6570;&#x65F6;&#x4E0D;&#x4F1A;&#x5E26;&#x4E0A;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x822C;&#x4E4B;&#x5305;&#x62EC;&#x51FD;&#x6570;&#x540D;&#x3002;
-&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x7528;C &#x5F00;&#x53D1;&#x4E86;&#x4E00;&#x4E2A;DLL &#x5E93;&#xFF0C;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x8BA9;C ++&#x8BED;&#x8A00;&#x4E5F;&#x80FD;&#x591F;&#x8C03;&#x7528;&#x4F60;&#x7684;DLL&#x8F93;&#x51FA;(Export)&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x7528;extern &quot;C&quot;&#x6765;&#x5F3A;&#x5236;&#x7F16;&#x8BD1;&#x5668;&#x4E0D;&#x8981;&#x4FEE;&#x6539;&#x4F60;&#x7684;&#x51FD;&#x6570;&#x540D;&#x3002;</p>
-<hr>
-<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> __INCvxWorksh  <span class="hljs-comment">/*&#x9632;&#x6B62;&#x8BE5;&#x5934;&#x6587;&#x4EF6;&#x88AB;&#x91CD;&#x590D;&#x5F15;&#x7528;*/</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> __INCvxWorksh</span>
+;; URL: http://wuhongyi.cn --><div class="section" id="extern-c">
+<h1>extern “C” 用法<a class="headerlink" href="#extern-c" title="永久链接至标题">¶</a></h1>
+<p>C++保留了一部分过程式语言的特点，因而它可以定义不属于任何类的全局变量和函数。但是，C++毕竟是一种面向对象的程序设计语言，为了支持函数的重载，C++对全局函数的处理方式与C有明显的不同。
+extern “C”的主要作用就是为了能够正确实现C++代码调用其他C语言代码。加上extern “C”后，会指示编译器这部分代码按C语言的进行编译，而不是C++的。由于C++支持函数重载，因此编译器编译函数的过程中会将函数的参数类型也加到编译后的代码中，而不仅仅是函数名；而C语言并不支持函数重载，因此编译C语言代码的函数时不会带上函数的参数类型，一般之包括函数名。
+比如说你用C 开发了一个DLL 库，为了能够让C ++语言也能够调用你的DLL输出(Export)的函数，你需要用extern “C”来强制编译器不要修改你的函数名。</p>
+<hr class="docutils" />
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef __INCvxWorksh  </span><span class="cm">/*防止该头文件被重复引用*/</span><span class="cp"></span>
+<span class="cp">#define __INCvxWorksh</span>
 
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> __cplusplus    <span class="hljs-comment">//__cplusplus&#x662F;cpp&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E2A;&#x5B8F;</span></span>
-<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> {          <span class="hljs-comment">//&#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x6309;C&#x8BED;&#x8A00;&#x7684;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;C++&#x7684;</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="cp">#ifdef __cplusplus    </span><span class="c1">//__cplusplus是cpp中自定义的一个宏</span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>          <span class="c1">//告诉编译器，这部分代码按C语言的格式进行编译，而不是C++的</span>
+<span class="cp">#endif</span>
 
-    <span class="hljs-comment">/**** some declaration or so *****/</span>  
+    <span class="cm">/**** some declaration or so *****/</span>  
 
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> __cplusplus</span>
-}
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
 
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">/* __INCvxWorksh */</span></span>
-</code></pre>
-<h2 id="extern-c&#x7684;&#x542B;&#x4E49;">extern &quot;C&quot;&#x7684;&#x542B;&#x4E49;</h2>
-<p>extern &quot;C&quot; &#x5305;&#x542B;&#x53CC;&#x91CD;&#x542B;&#x4E49;&#xFF0C;&#x4ECE;&#x5B57;&#x9762;&#x4E0A;&#x5373;&#x53EF;&#x5F97;&#x5230;&#xFF1A;&#x9996;&#x5148;&#xFF0C;&#x88AB;&#x5B83;&#x4FEE;&#x9970;&#x7684;&#x76EE;&#x6807;&#x662F;&#x201C;extern&#x201D;&#x7684;&#xFF1B;&#x5176;&#x6B21;&#xFF0C;&#x88AB;&#x5B83;&#x4FEE;&#x9970;&#x7684;&#x76EE;&#x6807;&#x662F;&#x201C;C&#x201D;&#x7684;&#x3002;
-&#x88AB;extern &quot;C&quot;&#x9650;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x6216;&#x53D8;&#x91CF;&#x662F;extern&#x7C7B;&#x578B;&#x7684;&#xFF1B;</p>
-<h3 id="extern&#x5173;&#x952E;&#x5B57;">extern&#x5173;&#x952E;&#x5B57;</h3>
-<p>extern&#x662F;C/C++&#x8BED;&#x8A00;&#x4E2D;&#x8868;&#x660E;&#x51FD;&#x6570;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#xFF08;&#x53EF;&#x89C1;&#x6027;&#xFF09;&#x7684;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x8BE5;&#x5173;&#x952E;&#x5B57;&#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x5176;&#x58F0;&#x660E;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x6A21;&#x5757;&#x6216;&#x5176;&#x5B83;&#x6A21;&#x5757;&#x4E2D;&#x4F7F;&#x7528;&#x3002;
-&#x901A;&#x5E38;&#xFF0C;&#x5728;&#x6A21;&#x5757;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x5BF9;&#x672C;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7ED9;&#x5176;&#x5B83;&#x6A21;&#x5757;&#x5F15;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4EE5;&#x5173;&#x952E;&#x5B57;extern&#x58F0;&#x660E;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6A21;&#x5757;B&#x6B32;&#x5F15;&#x7528;&#x8BE5;&#x6A21;&#x5757;A&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x65F6;&#x53EA;&#x9700;&#x5305;&#x542B;&#x6A21;&#x5757;A&#x7684;&#x5934;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x6A21;&#x5757;B&#x4E2D;&#x8C03;&#x7528;&#x6A21;&#x5757;A&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#xFF0C;&#x6A21;&#x5757;B&#x867D;&#x7136;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#xFF1B;&#x5B83;&#x4F1A;&#x5728;&#x94FE;&#x63A5;&#x9636;&#x6BB5;&#x4E2D;&#x4ECE;&#x6A21;&#x5757;A&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x76EE;&#x6807;&#x4EE3;&#x7801;&#x4E2D;&#x627E;&#x5230;&#x6B64;&#x51FD;&#x6570;&#x3002;
-&#x4E0E;extern&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x952E;&#x5B57;&#x662F;static&#xFF0C;&#x88AB;&#x5B83;&#x4FEE;&#x9970;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x5728;&#x672C;&#x6A21;&#x5757;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6216;&#x53D8;&#x91CF;&#x53EA;&#x53EF;&#x80FD;&#x88AB;&#x672C;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x5176;&#x4E0D;&#x53EF;&#x80FD;&#x88AB;extern &#x201C;C&#x201D;&#x4FEE;&#x9970;&#x3002;</p>
-<h3 id="&#x88AB;extern-c&#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x662F;&#x6309;&#x7167;c&#x8BED;&#x8A00;&#x65B9;&#x5F0F;&#x7F16;&#x8BD1;&#x548C;&#x94FE;&#x63A5;&#x7684;">&#x88AB;extern &quot;C&quot;&#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x662F;&#x6309;&#x7167;C&#x8BED;&#x8A00;&#x65B9;&#x5F0F;&#x7F16;&#x8BD1;&#x548C;&#x94FE;&#x63A5;&#x7684;</h3>
-<p>&#x9996;&#x5148;&#x770B;&#x770B;C++&#x4E2D;&#x5BF9;&#x7C7B;&#x4F3C;C&#x7684;&#x51FD;&#x6570;&#x662F;&#x600E;&#x6837;&#x7F16;&#x8BD1;&#x7684;&#x3002;
-&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#xFF0C;C++&#x652F;&#x6301;&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#xFF0C;&#x800C;&#x8FC7;&#x7A0B;&#x5F0F;&#x8BED;&#x8A00;C&#x5219;&#x4E0D;&#x652F;&#x6301;&#x3002;&#x51FD;&#x6570;&#x88AB;C++&#x7F16;&#x8BD1;&#x540E;&#x5728;&#x7B26;&#x53F7;&#x5E93;&#x4E2D;&#x7684;&#x540D;&#x5B57;&#x4E0E;C&#x8BED;&#x8A00;&#x7684;&#x4E0D;&#x540C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5047;&#x8BBE;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x4E3A;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">( <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y )</span></span>;
-</code></pre>
-<p>&#x8BE5;&#x51FD;&#x6570;&#x88AB;C&#x7F16;&#x8BD1;&#x5668;&#x7F16;&#x8BD1;&#x540E;&#x5728;&#x7B26;&#x53F7;&#x5E93;&#x4E2D;&#x7684;&#x540D;&#x5B57;&#x4E3A;_foo&#xFF0C;&#x800C;C++&#x7F16;&#x8BD1;&#x5668;&#x5219;&#x4F1A;&#x4EA7;&#x751F;&#x50CF;_foo_int_int&#x4E4B;&#x7C7B;&#x7684;&#x540D;&#x5B57;&#xFF08;&#x4E0D;&#x540C;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#x53EF;&#x80FD;&#x751F;&#x6210;&#x7684;&#x540D;&#x5B57;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x90FD;&#x91C7;&#x7528;&#x4E86;&#x76F8;&#x540C;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x751F;&#x6210;&#x7684;&#x65B0;&#x540D;&#x5B57;&#x79F0;&#x4E3A;&#x201C;mangled name&#x201D;&#xFF09;&#x3002;
-<strong>_foo_int_int&#x8FD9;&#x6837;&#x7684;&#x540D;&#x5B57;&#x5305;&#x542B;&#x4E86;&#x51FD;&#x6570;&#x540D;&#x3001;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x6570;&#x91CF;&#x53CA;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#xFF0C;C++&#x5C31;&#x662F;&#x9760;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#x6765;&#x5B9E;&#x73B0;&#x51FD;&#x6570;&#x91CD;&#x8F7D;&#x7684;&#x3002;</strong> &#x4F8B;&#x5982;&#xFF0C;&#x5728;C++&#x4E2D;&#xFF0C;&#x51FD;&#x6570;void foo( int x, int y )&#x4E0E;void foo( int x, float y )&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x7B26;&#x53F7;&#x662F;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x540E;&#x8005;&#x4E3A;_foo_int_float&#x3002;
-&#x540C;&#x6837;&#x5730;&#xFF0C;C++&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x9664;&#x652F;&#x6301;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x5916;&#xFF0C;&#x8FD8;&#x652F;&#x6301;&#x7C7B;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;&#x7528;&#x6237;&#x6240;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x7684;&#x7C7B;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x4E0E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x540C;&#x540D;&#xFF0C;&#x6211;&#x4EEC;&#x4EE5;&quot;.&quot;&#x6765;&#x533A;&#x5206;&#x3002;&#x800C;&#x672C;&#x8D28;&#x4E0A;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x5728;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x65F6;&#xFF0C;&#x4E0E;&#x51FD;&#x6570;&#x7684;&#x5904;&#x7406;&#x76F8;&#x4F3C;&#xFF0C;&#x4E5F;&#x4E3A;&#x7C7B;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x53D6;&#x4E86;&#x4E00;&#x4E2A;&#x72EC;&#x4E00;&#x65E0;&#x4E8C;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x4E0E;&#x7528;&#x6237;&#x7A0B;&#x5E8F;&#x4E2D;&#x540C;&#x540D;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x540D;&#x5B57;&#x4E0D;&#x540C;&#x3002;</p>
-<hr>
-<p><em>&#x672A;&#x52A0;extern &quot;C&quot;&#x58F0;&#x660E;&#x65F6;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;</em><br>&#x5047;&#x8BBE;&#x5728;C++&#x4E2D;&#xFF0C;&#x6A21;&#x5757;A&#x7684;&#x5934;&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-comment">// &#x6A21;&#x5757;A&#x5934;&#x6587;&#x4EF6;&#x3000;moduleA.h</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> MODULE_A_H</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MODULE_A_H</span>
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">foo</span><span class="hljs-params">( <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y )</span></span>;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-</code></pre>
-<pre><code class="lang-cpp"><span class="hljs-comment">//&#x5728;&#x6A21;&#x5757;B&#x4E2D;&#x5F15;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#xFF1A;</span>
-<span class="hljs-comment">// &#x6A21;&#x5757;B&#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#x3000;moduleB.cpp</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;moduleA.h&quot;</span></span>
-foo(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);
-</code></pre>
-<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5728;&#x8FDE;&#x63A5;&#x9636;&#x6BB5;&#xFF0C;&#x94FE;&#x63A5;&#x5668;&#x4F1A;&#x4ECE;&#x6A21;&#x5757;A&#x751F;&#x6210;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;moduleA.obj&#x4E2D;&#x5BFB;&#x627E;_foo_int_int&#x8FD9;&#x6837;&#x7684;&#x7B26;&#x53F7;&#xFF01;</p>
-<p><em>&#x52A0;extern &quot;C&quot;&#x58F0;&#x660E;&#x540E;&#x7684;&#x7F16;&#x8BD1;&#x548C;&#x94FE;&#x63A5;&#x65B9;&#x5F0F;</em><br>&#x52A0;extern &quot;C&quot;&#x58F0;&#x660E;&#x540E;&#xFF0C;&#x6A21;&#x5757;A&#x7684;&#x5934;&#x6587;&#x4EF6;&#x53D8;&#x4E3A;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-comment">// &#x6A21;&#x5757;A&#x5934;&#x6587;&#x4EF6;&#x3000;moduleA.h</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> MODULE_A_H</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MODULE_A_H</span>
-<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">foo</span><span class="hljs-params">( <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y )</span></span>;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
-</code></pre>
-<p>&#x5728;&#x6A21;&#x5757;B&#x7684;&#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#x4E2D;&#x4ECD;&#x7136;&#x8C03;&#x7528;foo( 2,3 )&#xFF0C;&#x5176;&#x7ED3;&#x679C;&#x662F;&#xFF1A;  </p>
-<ul>
-<li>A&#x7F16;&#x8BD1;&#x751F;&#x6210;foo&#x7684;&#x76EE;&#x6807;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x5BF9;&#x5176;&#x540D;&#x5B57;&#x8FDB;&#x884C;&#x7279;&#x6B8A;&#x5904;&#x7406;&#xFF0C;&#x91C7;&#x7528;&#x4E86;C&#x8BED;&#x8A00;&#x7684;&#x65B9;&#x5F0F;&#xFF1B;</li>
-<li>&#x94FE;&#x63A5;&#x5668;&#x5728;&#x4E3A;&#x6A21;&#x5757;B&#x7684;&#x76EE;&#x6807;&#x4EE3;&#x7801;&#x5BFB;&#x627E;foo(2,3)&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5BFB;&#x627E;&#x7684;&#x662F;&#x672A;&#x7ECF;&#x4FEE;&#x6539;&#x7684;&#x7B26;&#x53F7;&#x540D;_foo&#x3002;</li>
+<span class="cp">#endif </span><span class="cm">/* __INCvxWorksh */</span><span class="cp"></span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h2>extern “C”的含义<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>extern “C” 包含双重含义，从字面上即可得到：首先，被它修饰的目标是“extern”的；其次，被它修饰的目标是“C”的。
+被extern “C”限定的函数或变量是extern类型的；</p>
+<div class="section" id="extern">
+<h3>extern关键字<a class="headerlink" href="#extern" title="永久链接至标题">¶</a></h3>
+<p>extern是C/C++语言中表明函数和全局变量作用范围（可见性）的关键字，该关键字告诉编译器，其声明的函数和变量可以在本模块或其它模块中使用。
+通常，在模块的头文件中对本模块提供给其它模块引用的函数和全局变量以关键字extern声明。例如，如果模块B欲引用该模块A中定义的全局变量和函数时只需包含模块A的头文件即可。这样，模块B中调用模块A中的函数时，在编译阶段，模块B虽然找不到该函数，但是并不会报错；它会在链接阶段中从模块A编译生成的目标代码中找到此函数。
+与extern对应的关键字是static，被它修饰的全局变量和函数只能在本模块中使用。因此，一个函数或变量只可能被本模块使用时，其不可能被extern “C”修饰。</p>
+</div>
+<div class="section" id="extern-c-c">
+<h3>被extern “C”修饰的变量和函数是按照C语言方式编译和链接的<a class="headerlink" href="#extern-c-c" title="永久链接至标题">¶</a></h3>
+<p>首先看看C++中对类似C的函数是怎样编译的。
+作为一种面向对象的语言，C++支持函数重载，而过程式语言C则不支持。函数被C++编译后在符号库中的名字与C语言的不同。例如，假设某个函数的原型为：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">);</span>
+</pre></div>
+</div>
+<p>该函数被C编译器编译后在符号库中的名字为_foo，而C++编译器则会产生像_foo_int_int之类的名字（不同的编译器可能生成的名字不同，但是都采用了相同的机制，生成的新名字称为“mangled name”）。
+<strong>_foo_int_int这样的名字包含了函数名、函数参数数量及类型信息，C++就是靠这种机制来实现函数重载的。</strong> 例如，在C++中，函数void foo( int x, int y )与void foo( int x, float y )编译生成的符号是不相同的，后者为_foo_int_float。
+同样地，C++中的变量除支持局部变量外，还支持类成员变量和全局变量。用户所编写程序的类成员变量可能与全局变量同名，我们以”.”来区分。而本质上，编译器在进行编译时，与函数的处理相似，也为类中的变量取了一个独一无二的名字，这个名字与用户程序中同名的全局变量名字不同。</p>
+<hr class="docutils" />
+<p><em>未加extern “C”声明时的连接方式</em>假设在C++中，模块A的头文件如下：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// 模块A头文件　moduleA.h</span>
+<span class="cp">#ifndef MODULE_A_H</span>
+<span class="cp">#define MODULE_A_H</span>
+<span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">);</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//在模块B中引用该函数：</span>
+<span class="c1">// 模块B实现文件　moduleB.cpp</span>
+<span class="cp">#include</span> <span class="cpf">&quot;moduleA.h&quot;</span><span class="cp"></span>
+<span class="n">foo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>实际上，在连接阶段，链接器会从模块A生成的目标文件moduleA.obj中寻找_foo_int_int这样的符号！</p>
+<p><em>加extern “C”声明后的编译和链接方式</em>加extern “C”声明后，模块A的头文件变为：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// 模块A头文件　moduleA.h</span>
+<span class="cp">#ifndef MODULE_A_H</span>
+<span class="cp">#define MODULE_A_H</span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="kt">int</span> <span class="n">foo</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">);</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>在模块B的实现文件中仍然调用foo( 2,3 )，其结果是：</p>
+<ul class="simple">
+<li><p>A编译生成foo的目标代码时，没有对其名字进行特殊处理，采用了C语言的方式；</p></li>
+<li><p>链接器在为模块B的目标代码寻找foo(2,3)调用时，寻找的是未经修改的符号名_foo。</p></li>
 </ul>
-<p>&#x5982;&#x679C;&#x5728;&#x6A21;&#x5757;A&#x4E2D;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x4E86;foo&#x4E3A;extern &quot;C&quot;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x6A21;&#x5757;B&#x4E2D;&#x5305;&#x542B;&#x7684;&#x662F;extern int foo(int x, int y)&#xFF0C;&#x5219;&#x6A21;&#x5757;B&#x627E;&#x4E0D;&#x5230;&#x6A21;&#x5757;A&#x4E2D;&#x7684;&#x51FD;&#x6570;&#xFF1B;&#x53CD;&#x4E4B;&#x4EA6;&#x7136;&#x3002;</p>
-<p><strong>extern &#x201C;C&#x201D;&#x8FD9;&#x4E2A;&#x58F0;&#x660E;&#x7684;&#x771F;&#x5B9E;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;C++&#x4E0E;C&#x53CA;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x7684;&#x6DF7;&#x5408;&#x7F16;&#x7A0B;&#x3002;</strong></p>
-<p>C++&#x4EE3;&#x7801;&#x8C03;&#x7528;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x3001;&#x5728;C++&#x7684;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;<br>&#x5728;C++&#x4E2D;&#x5F15;&#x7528;C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x5305;&#x542B;C&#x8BED;&#x8A00;&#x5934;&#x6587;&#x4EF6;&#xFF08;&#x5047;&#x8BBE;&#x4E3A;cExample.h&#xFF09;&#x65F6;&#xFF0C;&#x9700;&#x8FDB;&#x884C;&#x4E0B;&#x5217;&#x5904;&#x7406;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span>
-{
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;cExample.h&quot;</span></span>
-}
-</code></pre>
-<p>&#x800C;&#x5728;C&#x8BED;&#x8A00;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5BF9;&#x5176;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x6307;&#x5B9A;&#x4E3A;extern&#x7C7B;&#x578B;&#xFF0C;C&#x8BED;&#x8A00;&#x4E2D;&#x4E0D;&#x652F;&#x6301;extern &quot;C&quot;&#x58F0;&#x660E;&#xFF0C;&#x5728;.c&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x4E86;extern &quot;C&quot;&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x7F16;&#x8BD1;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x3002;</p>
-<pre><code class="lang-cpp"><span class="hljs-comment">/* c&#x8BED;&#x8A00;&#x5934;&#x6587;&#x4EF6;&#xFF1A;cExample.h */</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> C_EXAMPLE_H</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> C_EXAMPLE_H</span>
-<span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">int</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> y)</span></span>;     <span class="hljs-comment">//&#x6CE8;:&#x5199;&#x6210;extern &quot;C&quot; int add(int , int ); &#x4E5F;&#x53EF;&#x4EE5;</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<p>如果在模块A中函数声明了foo为extern “C”类型，而模块B中包含的是extern int foo(int x, int y)，则模块B找不到模块A中的函数；反之亦然。</p>
+<p><strong>extern “C”这个声明的真实目的是为了实现C++与C及其它语言的混合编程。</strong></p>
+<p>C++代码调用C语言代码、在C++的头文件中使用在C++中引用C语言中的函数和变量，在包含C语言头文件（假设为cExample.h）时，需进行下列处理：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">extern</span> <span class="s">&quot;C&quot;</span>
+<span class="p">{</span>
+<span class="cp">#include</span> <span class="cpf">&quot;cExample.h&quot;</span><span class="cp"></span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>而在C语言的头文件中，对其外部函数只能指定为extern类型，C语言中不支持extern “C”声明，在.c文件中包含了extern “C”时会出现编译语法错误。</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* c语言头文件：cExample.h */</span>
+<span class="cp">#ifndef C_EXAMPLE_H</span>
+<span class="cp">#define C_EXAMPLE_H</span>
+<span class="k">extern</span> <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">);</span>     <span class="c1">//注:写成extern &quot;C&quot; int add(int , int ); 也可以</span>
+<span class="cp">#endif</span>
 
-<span class="hljs-comment">/* c&#x8BED;&#x8A00;&#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#xFF1A;cExample.c */</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;cExample.h&quot;</span></span>
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">add</span><span class="hljs-params">( <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y )</span>
-</span>{
-&#x3000;<span class="hljs-keyword">return</span> x + y;
-}
+<span class="cm">/* c语言实现文件：cExample.c */</span>
+<span class="cp">#include</span> <span class="cpf">&quot;cExample.h&quot;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">)</span>
+<span class="p">{</span>
+　<span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="hljs-comment">// c++&#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#xFF0C;&#x8C03;&#x7528;add&#xFF1A;cppFile.cpp</span>
-<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span>
-{
-&#x3000;<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;cExample.h&quot;</span>        //&#x6CE8;&#xFF1A;&#x6B64;&#x5904;&#x4E0D;&#x59A5;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x7F16;&#x8BD1;&#x901A;&#x4E0D;&#x8FC7;&#xFF0C;&#x6362;&#x6210; extern <span class="hljs-string">&quot;C&quot;</span> int add(int , int ); &#x53EF;&#x4EE5;&#x901A;&#x8FC7;</span>
-}
+<span class="c1">// c++实现文件，调用add：cppFile.cpp</span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span>
+<span class="p">{</span>
+　<span class="cp">#include</span> <span class="cpf">&quot;cExample.h&quot;        //注：此处不妥，如果这样编译通不过，换成 extern &quot;C&quot; int add(int , int ); 可以通过</span><span class="cp"></span>
+<span class="p">}</span>
 
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>* argv[])</span>
-</span>{
-&#x3000;add(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);
-&#x3000;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}
-</code></pre>
-<p><strong>&#x5982;&#x679C;C++&#x8C03;&#x7528;&#x4E00;&#x4E2A;C&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;.DLL&#x65F6;&#xFF0C;&#x5F53;&#x5305;&#x62EC;.DLL&#x7684;&#x5934;&#x6587;&#x4EF6;&#x6216;&#x58F0;&#x660E;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5E94;&#x52A0;extern &quot;C&quot;{}&#x3002;</strong></p>
-<p>&#x5728;C&#x4E2D;&#x5F15;&#x7528;C++&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;C++&#x7684;&#x5934;&#x6587;&#x4EF6;&#x9700;&#x6DFB;&#x52A0;extern &quot;C&quot;&#xFF0C;&#x4F46;&#x662F;&#x5728;C&#x8BED;&#x8A00;&#x4E2D;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x58F0;&#x660E;&#x4E86;extern &quot;C&quot;&#x7684;&#x8BE5;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x5E94;&#x8BE5;&#x4EC5;&#x5C06;C&#x6587;&#x4EF6;&#x4E2D;&#x5C06;C++&#x4E2D;&#x5B9A;&#x4E49;&#x7684;extern &quot;C&quot;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x4E3A;extern&#x7C7B;&#x578B;</p>
-<pre><code class="lang-cpp"><span class="hljs-comment">//C++&#x5934;&#x6587;&#x4EF6; cppExample.h</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> CPP_EXAMPLE_H</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CPP_EXAMPLE_H</span>
-<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">add</span><span class="hljs-params">( <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y )</span></span>;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+　<span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+　<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>如果C++调用一个C语言编写的.DLL时，当包括.DLL的头文件或声明接口函数时，应加extern “C”{}。</strong></p>
+<p>在C中引用C++语言中的函数和变量时，C++的头文件需添加extern “C”，但是在C语言中不能直接引用声明了extern “C”的该头文件，应该仅将C文件中将C++中定义的extern “C”函数声明为extern类型</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//C++头文件 cppExample.h</span>
+<span class="cp">#ifndef CPP_EXAMPLE_H</span>
+<span class="cp">#define CPP_EXAMPLE_H</span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="kt">int</span> <span class="n">add</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">);</span>
+<span class="cp">#endif</span>
 
-<span class="hljs-comment">//C++&#x5B9E;&#x73B0;&#x6587;&#x4EF6; cppExample.cpp</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;cppExample.h&quot;</span></span>
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">add</span><span class="hljs-params">( <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y )</span>
-</span>{
-&#x3000;<span class="hljs-keyword">return</span> x + y;
-}
+<span class="c1">//C++实现文件 cppExample.cpp</span>
+<span class="cp">#include</span> <span class="cpf">&quot;cppExample.h&quot;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">)</span>
+<span class="p">{</span>
+　<span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="hljs-comment">/* C&#x5B9E;&#x73B0;&#x6587;&#x4EF6; cFile.c
-<span class="hljs-comment">/* &#x8FD9;&#x6837;&#x4F1A;&#x7F16;&#x8BD1;&#x51FA;&#x9519;&#xFF1A;#include &quot;cExample.h&quot; */</span>
-extern int add( int x, int y );
-int main( int argc, char* argv[] )
-{
-&#x3000;add( 2, 3 );
-&#x3000;return 0;
-}
-</span></code></pre>
-<hr>
-<p>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;</p>
+<span class="cm">/* C实现文件 cFile.c</span>
+<span class="cm">/* 这样会编译出错：#include &quot;cExample.h&quot; */</span>
+<span class="k">extern</span> <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">);</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[]</span> <span class="p">)</span>
+<span class="p">{</span>
+　<span class="n">add</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">);</span>
+　<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>参考资料：</p>
 <blockquote>
-<p><a href="http://www.jianshu.com/p/5d2eeeb93590" target="_blank">http://www.jianshu.com/p/5d2eeeb93590</a></p>
-</blockquote>
-<!-- externC.md ends here -->
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
+<div><p>http://www.jianshu.com/p/5d2eeeb93590</p>
+</div></blockquote>
+<!-- externC.md ends here --></div>
+</div>
 </div>
 
-                        </div>
-                    </div>
-                
-            </div>
 
-            
-                
-                <a href="cast.html" class="navigation navigation-prev " aria-label="Previous page: cast">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="../Code/" class="navigation navigation-next " aria-label="Next page: 头文件">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Code/README.html" class="btn btn-neutral float-right" title="C++ 头文件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cast.html" class="btn btn-neutral float-left" title="cast" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"extern C","level":"1.2.2","depth":2,"next":{"title":"头文件","level":"1.3","depth":1,"path":"Code/README.md","ref":"Code/README.md","articles":[{"title":"algorithm","level":"1.3.1","depth":2,"path":"Code/algorithm.md","ref":"Code/algorithm.md","articles":[]},{"title":"array","level":"1.3.2","depth":2,"path":"Code/array.md","ref":"Code/array.md","articles":[]},{"title":"cmath","level":"1.3.3","depth":2,"path":"Code/cath.md","ref":"Code/cath.md","articles":[]},{"title":"map","level":"1.3.4","depth":2,"path":"Code/map.md","ref":"Code/map.md","articles":[]},{"title":"random","level":"1.3.5","depth":2,"path":"Code/random.md","ref":"Code/random.md","articles":[]},{"title":"vector","level":"1.3.6","depth":2,"path":"Code/vector.md","ref":"Code/vector.md","articles":[]}]},"previous":{"title":"cast","level":"1.2.1","depth":2,"path":"Base/cast.md","ref":"Base/cast.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Base/externC.md","mtime":"2018-05-14T09:21:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-05-18T09:58:28.871Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
+  <hr/>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Hongyi Wu(吴鸿毅)
 
-    </body>
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
-

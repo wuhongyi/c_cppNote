@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cmath &mdash; Template 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="map" href="map.html" />
+    <link rel="prev" title="array" href="array.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Template
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">简介</a></li>
+</ul>
+<p class="caption"><span class="caption-text">基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Base/README.html">base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/cast.html">cast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/externC.html">extern “C” 用法</a></li>
+</ul>
+<p class="caption"><span class="caption-text">头文件</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">C++ 头文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithm.html">algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">array</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">cmath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">random</a></li>
+</ul>
+<p class="caption"><span class="caption-text">技术储备</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sstream.html">sstream</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/string.html">string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sys.html">sys</a></li>
+</ul>
+<p class="caption"><span class="caption-text">外部库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/README.html">外部库的调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/fftw3.html">fftw3</a></li>
+</ul>
+<p class="caption"><span class="caption-text">规范</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/README.html">规范</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/ReturnNewline.html">回车符和换行符</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Template</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>cmath</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Code/cmath.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- cmath.md --- 
+;; 
+;; Description: 
+;; Author: Hongyi Wu(吴鸿毅)
+;; Email: wuhongyi@qq.com 
+;; Created: 三 8月 10 19:54:12 2016 (+0800)
+;; Last-Updated: 三 8月 10 19:54:56 2016 (+0800)
+;;           By: Hongyi Wu(吴鸿毅)
+;;     Update #: 1
+;; URL: http://wuhongyi.cn --><div class="section" id="cmath">
+<h1>cmath<a class="headerlink" href="#cmath" title="永久链接至标题">¶</a></h1>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>#include &lt;cmath&gt; //(math.h)
+
+abs 绝对值
+acos 反余弦
+acosh 反双曲余弦值（C++11）
+asin 反正弦
+asinh 反双曲正弦值（C++11）
+atan 反正切
+atan2 y/x的反正切
+atanh 反双曲正切值（C++11）
+cbrt 立方根（C++11）
+ceil 上取整，不小于给定值的最近整数
+copysign 以第二个参数y的符号（正或负）返回第一个参数x
+cos 余弦
+cosh 双曲余弦值
+erf 误差函数（也称之为高斯误差函数）（C++11）
+erfc 余补误差函数1-erf() （C++11）
+exp 以自然常数e为底的指数函数
+exp2 以2为底的指数函数（C++11）
+expm1 函数返回 exp(x) - 1（C++11）
+fabs 返回值为浮点型的绝对值
+fdim 如果X&gt;Y返回X-Y,否则返回0（C++11）
+floor 下取整，不大于给定值的最近整数
+fma 返回x*y+z,整个运算完成之后，只进行一次舍入（C++11）
+fmax 返回参数较大值（C++11）
+fmin 返回参数较小值（C++11）
+fmod 求余，获得浮点数除法操作的余数
+fpclassify （C++11）
+frexp 把一个浮点数分解为尾数和指数，其中 x = 尾数 * 2^指数，尾数为[0.5，1） 
+hypot 计算两个数平方的和的平方根。对于给定的直角三角形的两个直角边,求其斜边的长度（C++11）
+ilogb 把一个浮点数分解为尾数和指数，返回指数值。其中 x = 尾数 * 2^指数，尾数为[1，2）（C++11）
+isfinite 返回x是否是一个有限值。一个有限值是任何浮点值，既不是无限的也不是非数字（C++11）
+isgreater 返回是否x大于y（C++11）
+isgreaterequal 返回是否x大于或等于y（C++11）
+isinf 返回是否x是一个无穷大的值（正无穷大或负无穷大）。（C++11）
+isless 返回是否x小于y（C++11）
+islessequal 返回是否x小于或等于y（（C++11）
+islessgreater 返回是否x小于或大于y（C++11）
+isnan 返回是否x是非数字（C++11）
+isnormal 返回是否x是一个正常值，即不是无穷的、非数字、零、低于正常的（C++11）
+isunordered 返回是否x或y是非数字。检测两个浮点数是否是无序的，只要有一个是 NaN，就不能比较（C++11）
+ldexp 计算value乘以2的exp次幂 （ value * ( 2^exp ) ），其中exp为整型
+lgamma 返回X的伽玛函数的绝对值的自然对数（C++11）
+llrint 返回最靠近x的整数？？？（C++11）
+llround 返回最靠近x的整数？？？（C++11）
+log 计算自然（以 e 为底）对数（ln(x)）
+log10 计算普通（以 10 为底）对数（log10(x)）
+log1p 计算 1 与给定值 x 的和（1+x）的自然对数（ln(1+x)）（C++11）
+log2 计算给定数的以 2 为底的对数（log2(x)）（C++11）
+logb 计算给定数的以 2 为底的对数，x取绝对值（log2(|x|)）（C++11）
+lrint 返回最靠近x的整数？？？（C++11）
+lround 返回最靠近x的整数？？？（C++11）
+modf 将一个浮点数分解为整数及小数部分
+nan 将执行时定义的字符串作为静态化非数型（Quiet NaN）操作所需的值（C++11）
+nanf 将执行时定义的字符串作为静态化非数型（Quiet NaN）操作所需的值（C++11）
+nanl 将执行时定义的字符串作为静态化非数型（Quiet NaN）操作所需的值（C++11）
+nearbyint （C++11）
+nextafter （C++11）
+nexttoward （C++11）
+pow 幂运算
+remainder 获得浮点数除法操作的带符号余数。取到最近的，最小的余数（C++11）
+remquo 获得浮点数除法操作的带符号余数，且返回符号及操作结果的最后三位组成的整数（C++11）
+rint 返回最靠近x的整数？？？（C++11）
+round 返回最靠近x的整数？？？（C++11）
+scalbln 计算scalbln(x,n) = x * 2^n,其中n为long int 型（C++11）
+scalbn 计算scalbn(x,n) = x * 2^n,其中n为 int 型（C++11）
+signbit 返回是否x的符号是负的，可以应用到无穷、非数字、零；如果零无符号，它是正的（C++11）
+sin 正弦函数
+sinh 双曲正弦
+sqrt 计算平方根
+tan 正切函数
+tanh 双曲正切
+tgamma 返回X的伽玛函数（C++11）
+trunc 幅度（到 0 的距离，即绝对值）不大于给定值的最近整数（C++11）
+</pre></div>
+</div>
+<!-- cmath.md ends here --></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="map.html" class="btn btn-neutral float-right" title="map" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="array.html" class="btn btn-neutral float-left" title="array" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Hongyi Wu(吴鸿毅)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

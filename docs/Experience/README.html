@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>规范 &mdash; Template 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="回车符和换行符" href="ReturnNewline.html" />
+    <link rel="prev" title="fftw3" href="../ExternalLibrary/fftw3.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Template
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">简介</a></li>
+</ul>
+<p class="caption"><span class="caption-text">基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Base/README.html">base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/cast.html">cast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/externC.html">extern “C” 用法</a></li>
+</ul>
+<p class="caption"><span class="caption-text">头文件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Code/README.html">C++ 头文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/algorithm.html">algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/array.html">array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/cmath.html">cmath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/random.html">random</a></li>
+</ul>
+<p class="caption"><span class="caption-text">技术储备</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sstream.html">sstream</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/string.html">string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sys.html">sys</a></li>
+</ul>
+<p class="caption"><span class="caption-text">外部库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/README.html">外部库的调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/fftw3.html">fftw3</a></li>
+</ul>
+<p class="caption"><span class="caption-text">规范</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">规范</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">头文件依赖</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">内联函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">函数参数的顺序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#include">include 的路径及顺序</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ReturnNewline.html">回车符和换行符</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Template</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>规范</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Experience/README.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- README.md --- 
+;; 
+;; Description: 
+;; Author: Hongyi Wu(吴鸿毅)
+;; Email: wuhongyi@qq.com 
+;; Created: 三 8月 10 18:54:40 2016 (+0800)
+;; Last-Updated: 三 8月 10 19:06:22 2016 (+0800)
+;;           By: Hongyi Wu(吴鸿毅)
+;;     Update #: 3
+;; URL: http://wuhongyi.cn --><div class="section" id="id1">
+<h1>规范<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>正确使用头文件可令代码在可读性、文件大小和性能上大为改观.</p>
+<div class="section" id="id2">
+<h2>头文件依赖<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>当一个头文件被包含的同时也引入了新的依赖, 一旦该头文件被修改, 代码就会被重新编译. 如果这个头文件又包含了其他头文件, 这些头文件的任何改变都将导致所有包含了该头文件的代码被重新编译. 因此, 我们倾向于减少包含头文件, 尤其是在头文件中包含头文件.</p>
+<p>使用前置声明可以显著减少需要包含的头文件数量. 举例说明: 如果头文件中用到类 File, 但不需要访问 File 类的声明, 头文件中只需前置声明 class File; 而无须 #include “file/base/file.h”.</p>
+<p>不允许访问类的定义的前提下, 我们在一个头文件中能对类 Foo 做哪些操作?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">我们可以将数据成员类型声明为</span> <span class="n">Foo</span> <span class="o">*</span> <span class="n">或</span> <span class="n">Foo</span> <span class="o">&amp;.</span>
+<span class="n">我们可以将函数参数</span> <span class="o">/</span> <span class="n">返回值的类型声明为</span> <span class="n">Foo</span> <span class="p">(</span><span class="n">但不能定义实现</span><span class="p">)</span><span class="o">.</span>
+<span class="n">我们可以将静态数据成员的类型声明为</span> <span class="n">Foo</span><span class="p">,</span> <span class="n">因为静态数据成员的定义在类定义之外</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>反之, 如果你的类是 Foo 的子类, 或者含有类型为 Foo 的非静态数据成员, 则必须包含 Foo 所在的头文件.</p>
+<p>有时, 使用指针成员 (如果是 scoped_ptr 更好) 替代对象成员的确是明智之选. 然而, 这会降低代码可读性及执行效率, 因此如果仅仅为了少包含头文件，还是不要这么做的好.</p>
+<p>当然 .cc 文件无论如何都需要所使用类的定义部分, 自然也就会包含若干头文件.</p>
+</div>
+<div class="section" id="id3">
+<h2>内联函数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>定义: 当函数被声明为内联函数之后, 编译器会将其内联展开, 而不是按通常的函数调用机制进行调用.</p>
+<p>优点: 当函数体比较小的时候, 内联该函数可以令目标代码更加高效. 对于存取函数以及其它函数体比较短, 性能关键的函数, 鼓励使用内联.</p>
+<p>缺点: 滥用内联将导致程序变慢. 内联可能使目标代码量或增或减, 这取决于内联函数的大小. 内联非常短小的存取函数通常会减少代码大小, 但内联一个相当大的函数将戏剧性的增加代码大小. 现代处理器由于更好的利用了指令缓存, 小巧的代码往往执行更快。</p>
+<p>结论: 一个较为合理的经验准则是, 不要内联超过 10 行的函数. 谨慎对待析构函数, 析构函数往往比其表面看起来要更长, 因为有隐含的成员和基类析构函数被调用!</p>
+<p>另一个实用的经验准则: 内联那些包含循环或 switch 语句的函数常常是得不偿失 (除非在大多数情况下, 这些循环或 switch 语句从不被执行).</p>
+</div>
+<div class="section" id="id4">
+<h2>函数参数的顺序<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>C/C++ 函数参数分为输入参数, 输出参数, 和输入/输出参数三种. 输入参数一般传值或传 const 引用, 输出参数或输入/输出参数则是非-const 指针. 对参数排序时, 将只输入的参数放在所有输出参数之前. 尤其是不要仅仅因为是新加的参数, 就把它放在最后; 即使是新加的只输入参数也要放在输出参数之前.</p>
+<p>这条规则并不需要严格遵守. 输入/输出两用参数 (通常是类/结构体变量) 把事情变得复杂, 为保持和相关函数的一致性, 你有时不得不有所变通.</p>
+</div>
+<div class="section" id="include">
+<h2>include 的路径及顺序<a class="headerlink" href="#include" title="永久链接至标题">¶</a></h2>
+<p>项目内头文件应按照项目源代码目录树结构排列, 避免使用 UNIX 特殊的快捷目录 . (当前目录) 或 .. (上级目录).</p>
+<p>例如, dir/foo.cc 的主要作用是实现或测试 dir2/foo2.h 的功能, foo.cc 中包含头文件的次序如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span> <span class="n">dir2</span><span class="o">/</span><span class="n">foo2</span><span class="o">.</span><span class="n">h</span> <span class="p">(</span><span class="n">优先位置</span><span class="p">,</span> <span class="n">详情如下</span><span class="p">)</span>
+<span class="c1">#. C 系统文件</span>
+<span class="c1">#. C++ 系统文件</span>
+<span class="c1">#. 其他库的 .h 文件</span>
+<span class="c1">#. 本项目内 .h 文件</span>
+</pre></div>
+</div>
+<p>这种排序方式可有效减少隐藏依赖.</p>
+<!-- README.md ends here --></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ReturnNewline.html" class="btn btn-neutral float-right" title="回车符和换行符" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ExternalLibrary/fftw3.html" class="btn btn-neutral float-left" title="fftw3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Hongyi Wu(吴鸿毅)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

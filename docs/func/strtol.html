@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>strtol &mdash; Template 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Template
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">简介</a></li>
+</ul>
+<p class="caption"><span class="caption-text">基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Base/README.html">base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/cast.html">cast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Base/externC.html">extern “C” 用法</a></li>
+</ul>
+<p class="caption"><span class="caption-text">头文件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Code/README.html">C++ 头文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/algorithm.html">algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/array.html">array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/cmath.html">cmath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Code/random.html">random</a></li>
+</ul>
+<p class="caption"><span class="caption-text">技术储备</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/map.html">map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sstream.html">sstream</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/string.html">string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Technical/sys.html">sys</a></li>
+</ul>
+<p class="caption"><span class="caption-text">外部库</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/README.html">外部库的调用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ExternalLibrary/fftw3.html">fftw3</a></li>
+</ul>
+<p class="caption"><span class="caption-text">规范</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/README.html">规范</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Experience/ReturnNewline.html">回车符和换行符</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Template</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>strtol</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/func/strtol.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <!-- strtol.md --- 
+;; 
+;; Description: 
+;; Author: Hongyi Wu(吴鸿毅)
+;; Email: wuhongyi@qq.com 
+;; Created: 三 7月  5 19:38:14 2017 (+0800)
+;; Last-Updated: 三 7月  5 19:40:24 2017 (+0800)
+;;           By: Hongyi Wu(吴鸿毅)
+;;     Update #: 1
+;; URL: http://wuhongyi.cn --><div class="section" id="strtol">
+<h1>strtol<a class="headerlink" href="#strtol" title="永久链接至标题">¶</a></h1>
+<p>strtol函数会将参数nptr字符串根据参数base来转换成长整型数。</p>
+<div class="section" id="id1">
+<h2>函数定义<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">long</span> <span class="kt">int</span> <span class="nf">strtol</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">nptr</span><span class="p">,</span><span class="kt">char</span> <span class="o">**</span><span class="n">endptr</span><span class="p">,</span><span class="kt">int</span> <span class="n">base</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>函数说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>参数base范围从2至36，或0。参数base代表采用的进制方式，如base值为10则采用10进制，若base值为16则采用16进制等。当base值为0时则是采用10进制做转换，但遇到如’0x’前置字符则会使用16进制做转换、遇到’0’前置字符而不是’0x’的时候会使用8进制做转换。</p>
+<p>一开始strtol()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，再遇到非数字或字符串结束时(‘\0’)结束转换，并将结果返回。若参数endptr不为NULL，则会将遇到不合条件而终止的nptr中的字符指针由endptr返回；若参数endptr为NULL，则会不返回非法字符串。</p>
+<ul class="simple">
+<li><p>不仅可以识别十进制整数，还可以识别其它进制的整数，取决于base参数，比如strtol(“0XDEADbeE~~”, NULL, 16)返回0xdeadbee的值，strtol(“0777~~”, NULL, 8)返回0777的值。</p></li>
+<li><p>endptr是一个传出参数，函数返回时指向后面未被识别的第一个字符。例如char *pos; strtol(“123abc”, &amp;pos, 10);，strtol返回123，pos指向字符串中的字母a。如果字符串开头没有可识别的整数，例如char *pos; strtol(“ABCabc”, &amp;pos, 10);，则strtol返回0，pos指向字符串开头，可以据此判断这种出错的情况，而这是atoi处理不了的。</p></li>
+<li><p>如果字符串中的整数值超出long int的表示范围（上溢或下溢），则strtol返回它所能表示的最大（或最小）整数，并设置errno为ERANGE，例如strtol(“0XDEADbeef~~”, NULL, 16)返回0x7fffffff并设置errno为ERANGE</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="o">*</span><span class="n">stopstring</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">base</span><span class="p">;</span>
+    <span class="kt">long</span> <span class="n">l</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">ul</span><span class="p">;</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="s">&quot;3.1415926 This stopped it&quot;</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">strtod</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stopstring</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;string = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;strtod = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Stopped scan at: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">stopstring</span><span class="p">);</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="s">&quot;-1011 This stopped it&quot;</span><span class="p">;</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">strtol</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stopstring</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;string = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;strtol = %ld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Stopped scan at: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">stopstring</span><span class="p">);</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="s">&quot;10110134932&quot;</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;string = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">);</span>
+    <span class="cm">/*Convertstringusingbase2,4,and8:*/</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">base</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">base</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">;</span> <span class="n">base</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/*Convertthestring:*/</span>
+        <span class="n">ul</span> <span class="o">=</span> <span class="n">strtoul</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stopstring</span><span class="p">,</span> <span class="n">base</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;strtol = %ld(base %d)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ul</span><span class="p">,</span> <span class="n">base</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Stopped scan at: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">stopstring</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<!-- strtol.md ends here --></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Hongyi Wu(吴鸿毅)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
